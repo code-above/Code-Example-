@@ -5,12 +5,15 @@ html {
   
 }
 
+main {
+    width: 903px;
+}
 
 .gradient {
     background: linear-gradient(90deg, rgba(16,108,159,1) 0%, rgba(72,219,239,1) 100%);
   }
 
-  h1  {
+  h1, button  {
       color: rgba(16,108,159,1);
   }
 
@@ -29,6 +32,18 @@ h3 {
 
 button {
     background: linear-gradient(90deg, #9CE7FF 0%, #48BDEF 100%);
-    /* width: 94px;
-    height: 30px; */
+   
+}
+
+button p {
+    font-size: 9px;
+}
+
+.button-shadow {
+    box-shadow: 0px 2px 3px rgba(133, 133, 133, 0.25);
+}
+
+.bed-container {
+    background: linear-gradient(99.79deg, #EEEEEE 4.91%, #F1F1F1 100.32%);
+    border: #C8C8C8
 }
