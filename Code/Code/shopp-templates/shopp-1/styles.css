@@ -1,0 +1,84 @@
+
+
+html {
+    font-family: 'Nunito', sans-serif;
+  
+}
+
+main {
+    width: 903px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, rgba(16,108,159,1) 0%, rgba(72,219,239,1) 100%);
+  }
+
+  h1, button  {
+      color: rgba(16,108,159,1);
+  }
+
+.box-shadow {
+
+  box-shadow: 0px 2px 20px 10px rgba(198, 198, 198, 0.1);
+  height: 371px; 
+  /* width: 275px; */
+
+}
+
+h3 {
+    color:rgba(0,93,146,1);
+
+}
+
+.blue-button {
+    background: linear-gradient(90deg, #9CE7FF 0%, #48BDEF 100%);
+   
+}
+
+button p {
+    font-size: 9px;
+}
+
+
+.button-shadow {
+    box-shadow: 0px 2px 3px rgba(133, 133, 133, 0.25);
+}
+
+.bed-container {
+    background: linear-gradient(99.79deg, #EEEEEE 4.91%, #F1F1F1 100.32%);
+    border: #C8C8C8
+}
+
+.bed-description {
+    width: 528px;
+    height: 114px;
+}
+
+.size-button{
+    border: 1px solid #106C9F;
+}
+
+.queen-size-button {
+    background-color:#106C9F ;
+}
+
+footer {
+    background: linear-gradient(99.79deg, #EEEEEE 4.91%, #F1F1F1 100.32%);
+}
+
+.stack-top {
+   z-index: 3;
+   overflow:hidden;
+   background: linear-gradient(180deg, rgba(16, 108, 159, 0.84) 0%, rgba(57, 161, 219, 0.87) 100%);   
+   height: 371px;
+
+}
+
+.wrapper {
+    width:264px;
+    height: 371px;
+    z-index:0;
+    top: 0;
+
+   
+}
