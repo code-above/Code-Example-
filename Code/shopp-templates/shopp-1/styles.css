@@ -2,7 +2,7 @@
 
 html {
     font-family: 'Nunito', sans-serif;
-  
+   
 }
 
 main {
@@ -17,11 +17,11 @@ main {
       color: rgba(16,108,159,1);
   }
 
+
 .box-shadow {
 
   box-shadow: 0px 2px 20px 10px rgba(198, 198, 198, 0.1);
   height: 371px; 
-  /* width: 275px; */
 
 }
 
@@ -30,7 +30,7 @@ h3 {
 
 }
 
-button {
+.blue-button {
     background: linear-gradient(90deg, #9CE7FF 0%, #48BDEF 100%);
    
 }
@@ -39,11 +39,55 @@ button p {
     font-size: 9px;
 }
 
+
 .button-shadow {
     box-shadow: 0px 2px 3px rgba(133, 133, 133, 0.25);
 }
+
+
+.stack-top {
+    height: 371px;
+ 
+ }
+ 
+ .card-cover {
+     background: linear-gradient(180deg, rgba(16, 108, 159, 0.84) 0%, rgba(57, 161, 219, 0.87) 100%);
+     width:264px;
+     height: 371px;
+ 
+ } 
+ 
+ .close-button {
+     color: rgba(16, 108, 159, 1);
+     background: rgba(255, 255, 255, 0.6);
+     border: 1px solid #106C9F;
+ }
+
 
 .bed-container {
     background: linear-gradient(99.79deg, #EEEEEE 4.91%, #F1F1F1 100.32%);
     border: #C8C8C8
 }
+
+.cart-button {
+    background: rgba(255, 255, 255, 0.29);
+}
+
+.bed-description {
+    width: 528px;
+    height: 114px;
+}
+
+.size-button{
+    border: 1px solid #106C9F;
+}
+
+.queen-size-button {
+    background-color:#106C9F ;
+}
+
+footer {
+    background: linear-gradient(99.79deg, #EEEEEE 4.91%, #F1F1F1 100.32%);
+}
+
+
