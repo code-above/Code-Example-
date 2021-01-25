@@ -12,7 +12,14 @@
 
 <body>
 <header>
-  <div class="gradient h-60 w-full"></div>
+  <div class="gradient h-60 w-full">
+    <div class="flex items-center">
+      <div>
+        <img class="w-32 h-32  ml-24 mt-14 mr-9"src="Logo.jpg.png">
+      </div>
+    <div class="text-5xl text-gray-200 font-bold pt-12">Simplistic Contemporary Furniture</div>
+  </div>
+</div>
 </header>
 
 <div class="bg-gray-100 h-full ">
@@ -28,14 +35,14 @@
     <!-- products row 2 (card 1)-->
 
     <div class="flex">
-      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white box-shadow">
+      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
         <div class="">
           <img class="w-44 h-40 mx-auto mx-10 mt-11"src="chair.jpg" alt="modern chair">
           <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Modern Chair</h3>
           <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">All Sizes Available</p>
         <div class="flex justify-between ">
           <h3 class="font-bold ml-6 mt-4 text-3xl ">$250 </h3>
-          <button href="#" class="blue-button rounded-2xl w-24 h-8 flex my-4 mr-5 items-center button-shadow">
+          <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
             <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
               <!-- <img class="arrow " src="chevron-down.svg"> -->
               <svg class= "w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
@@ -43,7 +50,7 @@
               </svg>
             </div>
             <div>
-            <p class="font-bold ml-1 ">View Details</p>
+            <p class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
             </div>
           </button>
         </div> 
@@ -52,14 +59,14 @@
 
       
 <!-- products row 2 (card 2)-->
-      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white box-shadow ">
+      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
         <div class="">
           <img class="w-44 h-40 mx-auto mx-10 mt-11"src="rustic table.jpg" alt="rustic-table"> 
           <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Rustic Table</h3>
           <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Great for coffee</p>
         <div class="flex justify-between ">
           <h3 class="font-bold ml-6 mt-4 text-3xl ">$450 </h3>
-          <button href="#" class="blue-button rounded-2xl w-24 h-8 flex my-4 mr-5 items-center button-shadow">
+          <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
             <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
               <!-- <img class="arrow " src="chevron-down.svg"> -->
               <svg class= "w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
@@ -67,7 +74,7 @@
               </svg>
             </div>
             <div>
-            <p class="font-bold ml-1 ">View Details</p>
+            <p class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
             </div>
           </button>
         </div> 
@@ -76,7 +83,7 @@
 
 <!-- products row 2 (card 3)--> 
 
-      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white box-shadow   ">
+      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
         <div class="card-cover rounded-2xl absolute">
           <button class="close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white "> 
             <p class="text-3xl font-bold">X</p>
@@ -88,14 +95,14 @@
           <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28 ">Great for sleeping</p>
         <div class="flex justify-between ">
           <h3 class="font-bold ml-6 mt-4 text-3xl ">$1,000 </h3>
-          <button href="#" class="blue-button rounded-2xl w-24 h-8 flex my-4 mr-5 items-center button-shadow">
+          <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
             <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-10  ">
               <svg class= "w-3 h-3 mx-auto my-auto mt-0.5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
               </svg>
             </div>
             <div>
-            <p class="font-bold ml-1 ">View Details</p>
+            <p class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
             </div>
           </button>
         </div>
@@ -106,13 +113,15 @@
 
   <!-- bed explained row 3 (col 1)-->
 
-  <article class="col-span-3 border-2 border-black flex mt-8 h-80 mb-16 rounded-3xl ring-gray-300 ring-2 bed-container">
+  <article class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
     <div class="col-span-1 ml-10 w-64 mt-11  ">
       <img class="w-64 h-44 "src="sleek-mini.png">
-    <div class="flex px-5" >
-      <img class=" w-16 h-20  mr-4 py-4 px-1.5" src="sleek-mini.png">
-      <img class=" w-16 h-20  mr-4 py-4 px-1.5" src="sleek-mini.png">
-      <img class=" w-16 h-20  mr-4 py-4 px-1.5" src="sleek-mini.png">
+    <div class="flex pr-8 " >
+      <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></i>      
+      <img class=" w-16 h-20 mr-2 py-4 " src="sleek-mini.png">
+      <img class=" w-16 h-20  mr-2 py-4 " src="sleek-mini.png">
+      <img class=" w-16 h-20 mr-2 py-4 " src="sleek-mini.png">
+      <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></i>
     </div>
   </div>
 
@@ -122,14 +131,14 @@
       <h3 class="font-bold text-xl text-base leading-7 mt-14">Sleek Bed</h3>
       <div class="flex">
         <h3 class="text-3xl mt-0.5 leading-10">$1,000</h3>
-        <button href="#" class="blue-button rounded-2xl w-24 h-8 flex ml-4 items-center button-shadow">
-          <div class="cart-button w-4 h-4 ml-2 my-auto rounded-full  ">
-            <svg class="w-4 h-4 " fill="none" stroke="rgba(16, 108, 159, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+        <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+          <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+            <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
             </svg>
           </div>
           <div>
-          <p class="font-bold ml-1 ">Add to Cart</p>
+          <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
       </div>
     </div>
     <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -148,13 +157,171 @@
     </div>
   </article>
 
+
+  <!-- ========================================row 4 (Cards)-->
+  <section class="col-span-3">
+  <div class="flex">
+    <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
+      <div class="">
+        <img class="w-44 h-40 mx-auto mx-10 mt-11"src="lamp.jpg" alt="lamp">
+        <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Accent Lamp</h3>
+        <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Lightbulb included</p>
+      <div class="flex justify-between ">
+        <h3 class="font-bold ml-6 mt-4 text-3xl ">$75 </h3>
+        <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+          <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+            <!-- <img class="arrow " src="chevron-down.svg"> -->
+            <svg class= "w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div>
+          <p class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
+          </div>
+        </button>
+      </div> 
+      </div>
+    </article>
+
+    
+<!--  products row 4 (card 2)-->
+    <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
+      <div class="">
+        <img class="w-44 h-40 mx-auto mx-10 mt-11"src="bar-stool.jpg" alt="bar-stool"> 
+        <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Bar Stool</h3>
+        <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Industrial style</p>
+      <div class="flex justify-between ">
+        <h3 class="font-bold ml-6 mt-4 text-3xl ">$150 </h3>
+        <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+          <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+            <!-- <img class="arrow " src="chevron-down.svg"> -->
+            <svg class= "w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div>
+          <p class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
+          </div>
+        </button>
+      </div> 
+      </div>
+    </article>
+
+<!-- products row 4 (card 3)--> 
+
+<article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
+  <div class="">
+    <img class="w-44 h-40 mx-auto mx-10 mt-11"src="velvet-sofa.jpg" alt="velvet-sofa"> 
+    <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Velvet Sofa</h3>
+    <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Navy blue</p>
+  <div class="flex justify-between ">
+    <h3 class="font-bold ml-6 mt-4 text-3xl ">$550 </h3>
+    <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+      <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+        <!-- <img class="arrow " src="chevron-down.svg"> -->
+        <svg class= "w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div>
+      <p class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
+      </div>
+    </button>
+  </div> 
+  </div>
+</article>
+</div>
+</section>
+
+
+<!-- =================================products row 5 (cards)-->
+<section class="col-span-3 mb-16">
+  <div class="flex">
+    <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
+      <div class="">
+        <img class="w-44 h-40 mx-auto mx-10 mt-11"src="desk.jpg" alt="desk">
+        <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Gold Accent Desk</h3>
+        <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Great for writing</p>
+      <div class="flex justify-between ">
+        <h3 class="font-bold ml-6 mt-4 text-3xl ">$250 </h3>
+        <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+          <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+            <!-- <img class="arrow " src="chevron-down.svg"> -->
+            <svg class= "w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div>
+          <p class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
+          </div>
+        </button>
+      </div> 
+      </div>
+    </article>
+
+    
+<!--  products row 5 (card 2)-->
+    <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
+      <div class="">
+        <img class="w-44 h-40 mx-auto mx-10 mt-11"src="glass-table.jpg" alt="glass table"> 
+        <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Glass Side Table</h3>
+        <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Metallic silver</p>
+      <div class="flex justify-between ">
+        <h3 class="font-bold ml-6 mt-4 text-3xl ">$300 </h3>
+        <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+          <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+            <!-- <img class="arrow " src="chevron-down.svg"> -->
+            <svg class= "w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div>
+          <p class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
+          </div>
+        </button>
+      </div> 
+      </div>
+    </article>
+
+<!-- products row 5 (card 3)--> 
+
+<article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
+  <div class="">
+    <img class="w-44 h-40 mx-auto mx-10 mt-11"src="ceiling-light.jpg" alt="ceiling light"> 
+    <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Ceiling Light</h3>
+    <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Great for bedrooms</p>
+  <div class="flex justify-between ">
+    <h3 class="font-bold ml-6 mt-4 text-3xl ">$130 </h3>
+    <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+      <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+        <!-- <img class="arrow " src="chevron-down.svg"> -->
+        <svg class= "w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div>
+      <p class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
+      </div>
+    </button>
+  </div> 
+  </div>
+</article>
+</div>
+</section>
+
+
+
+
+
+
 </main>
  </div> 
 
 
 
-<footer class="bg-gray-100">
+<footer class="bg-gray-200 ">
   <div class="w-full h-36  "> 
+    <div class="mx-64 py-12 text-gray-400 text-xl font-bold">Copyright 2021, Furniture Co</div>
 </footer>
 
 
