@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
 <body>
@@ -23,7 +24,8 @@
 </header>
 
 <div class="bg-gray-100 h-full ">
-<main class="mx-64 grid grid-cols-3 "> 
+<main x-data = "{ tab: ' product1 '}"
+      class="mx-64 grid grid-cols-3 "> 
 
   <!-- top text row 1-->
   <section class="col-span-3">
@@ -32,17 +34,18 @@
       <p class="text-gray-400 h-24 text-xl font-normal leading-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     </div>
 
-    <!-- products row 2 (card 1)-->
-
+    <!-- products chair ==============================(card 1)-->
     <div class="flex">
-      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
+      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md"
+            @click.prevent="tab = 'product1' "> 
         <div class="">
           <img class="w-44 h-40 mx-auto mx-10 mt-11"src="chair.jpg" alt="modern chair">
           <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Modern Chair</h3>
           <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">All Sizes Available</p>
         <div class="flex justify-between ">
           <h3 class="font-bold ml-6 mt-4 text-3xl ">$250 </h3>
-          <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+          <button 
+                  href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
             <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
               <!-- <img class="arrow " src="chevron-down.svg"> -->
               <svg class= "w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
@@ -55,18 +58,20 @@
           </button>
         </div> 
         </div>
-      </article>
+            </article>
 
-      
-<!-- products row 2 (card 2)-->
-      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
+
+<!-- products table ======================(card 2)-->
+      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md "
+                @click.prevent="tab = 'product2' "> 
         <div class="">
           <img class="w-44 h-40 mx-auto mx-10 mt-11"src="rustic table.jpg" alt="rustic-table"> 
           <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Rustic Table</h3>
           <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Great for coffee</p>
         <div class="flex justify-between ">
           <h3 class="font-bold ml-6 mt-4 text-3xl ">$450 </h3>
-          <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+          <button  
+                  href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
             <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
               <!-- <img class="arrow " src="chevron-down.svg"> -->
               <svg class= "w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
@@ -81,82 +86,196 @@
         </div>
       </article>
 
-<!-- products row 2 (card 3)--> 
+<!-- products  bed (card 3)--> 
+<!-- <Div x-data = "{ isOpen: true}"> -->
 
-      <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
-        <div class="card-cover rounded-2xl absolute">
-          <button class="close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white "> 
-            <p class="text-3xl font-bold">X</p>
+      <article 
+      @click.prevent="tab = 'product3' "
+      class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
+  <Div x-data = "{ isOpen: false}">
+        <div x-show = "isOpen"
+        class="card-cover rounded-2xl absolute">
+        <button  x-show = "isOpen"
+          class="close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ">
+         <p x-show = "isOpen" 
+            class="text-3xl font-bold" >X</p>
           </button>
         </div>
+    
         <div class="stack-top rounded-2xl overflow-hidden ">
           <img class="w-44 h-40 mx-auto mx-10 mt-11 "src="bed.png" >
           <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Sleek Bed</h3>
           <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28 ">Great for sleeping</p>
         <div class="flex justify-between ">
           <h3 class="font-bold ml-6 mt-4 text-3xl ">$1,000 </h3>
-          <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+          <button 
+                  href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
             <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-10  ">
               <svg class= "w-3 h-3 mx-auto my-auto mt-0.5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
               </svg>
             </div>
             <div>
-            <p class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
+            <p  x-on:click = "isOpen = !isOpen"
+                @click.prevent ="tab = 'product3' "
+            class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
+</Div>      
             </div>
           </button>
         </div>
       </div>
       </article>
     </div>
-  </section>
-
-  <!-- bed explained row 3 (col 1)-->
-
-  <article class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
-    <div class="col-span-1 ml-10 w-64 mt-11  ">
-      <img class="w-64 h-44 "src="sleek-mini.png">
-    <div class="flex pr-8 " >
+    
+      <!-- description sleek bed==================-->
+      <article 
+      x-show ="tab === 'product3' "
+      class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+      <div class="col-span-1 ml-10 w-64 mt-11  ">
+      <img class="w-64 h-44 "src="bed.png">
+      <div class="flex pr-8 " >
       <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></i>      
       <img class=" w-16 h-20 mr-2 py-4 " src="sleek-mini.png">
       <img class=" w-16 h-20  mr-2 py-4 " src="sleek-mini.png">
       <img class=" w-16 h-20 mr-2 py-4 " src="sleek-mini.png">
       <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></i>
-    </div>
-  </div>
+      </div>
+      </div>
 
-<!-- bed explained row 3 (col 2)-->
 
-    <div class="w-2/3 pl-5 ">
+      <!-- bed explained row 3 (col 2)-->
+
+      <div class="w-2/3 pl-5 ">
       <h3 class="font-bold text-xl text-base leading-7 mt-14">Sleek Bed</h3>
       <div class="flex">
-        <h3 class="text-3xl mt-0.5 leading-10">$1,000</h3>
-        <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
-          <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
-            <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-          <div>
-          <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+      <h3 class="text-3xl mt-0.5 leading-10">$1,000</h3>
+      <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+      <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+        <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
-    </div>
-    <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  
-    <!-- size buttons-->
-    <div class="">
+      <div>
+      <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+      </div>
+      </div>
+      <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <!-- size buttons-->
+      <div class="">
       <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
-        <h5 class="text-sm font-normal leading-5 ">KING</h5>
+      <h5 class="text-sm font-normal leading-5 ">KING</h5>
       </button>
       <button  class="queen-size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  ">
-        <h5 class="text-sm font-normal text-white leading-5">QUEEN</h5>
+      <h5 class="text-sm font-normal text-white leading-5">QUEEN</h5>
       </button>
       <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
-        <h5 class="text-sm font-normal leading-5">DOUBLE</h5>
+      <h5 class="text-sm font-normal leading-5">DOUBLE</h5>
       </button>
-    </div>
-  </article>
+      </div>
+      </article>
+<!-- </div> -->
+          
+      <!-- description 2 rustic table========================-->
+      <article 
+        x-show ="tab === 'product2' "
+        class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+      <div class="col-span-1 ml-10 w-64 mt-11  ">
+      <img class="w-64 h-44 "src="rustic-table2.png">
+      <div class="flex pr-8 " >
+      <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></i>      
+      <img class=" w-16 h-20 mr-2 py-4 " src="rustic-table2.png">
+      <img class=" w-16 h-20  mr-2 py-4 " src="rustic-table2.png">
+      <img class=" w-16 h-20 mr-2 py-4 " src="rustic-table2.png">
+      <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></i>
+      </div>
+      </div>
 
+      <!-- rustice table explained row 3 (col 2)-->
+
+      <div class="w-2/3 pl-5 ">
+      <h3 class="font-bold text-xl text-base leading-7 mt-14">Rustic Table</h3>
+      <div class="flex">
+      <h3 class="text-3xl mt-0.5 leading-10">$450</h3>
+      <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+        <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+          <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+        <div>
+        <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+      </div>
+      </div>
+      <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <!-- size buttons-->
+      <div class="">
+      <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
+      <h5 class="text-sm font-normal leading-5 ">SMALL</h5>
+      </button>
+      <button  class="queen-size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  ">
+      <h5 class="text-sm font-normal text-white leading-5">MEDIUM</h5>
+      </button>
+      <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
+      <h5 class="text-sm font-normal leading-5">LARGE</h5>
+      </button>
+      </div>
+      </article>
+
+
+
+      <!-- description 3 modern chair -->
+
+      <article 
+        x-show= "tab === 'product1' "
+        class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+      <div class="col-span-1 ml-10 w-64 mt-11  ">
+      <img class="w-64 h-44 "src="chair2.png">
+      <div class="flex pr-8 " >
+      <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></i>      
+      <img class=" w-16 h-20 mr-2 py-4 " src="chair2.png">
+      <img class=" w-16 h-20  mr-2 py-4 " src="chair2.png">
+      <img class=" w-16 h-20 mr-2 py-4 " src="chair2.png">
+      <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></i>
+      </div>
+      </div>
+
+      <!-- modern chair explained row 3 (col 2)-->
+
+      <div class="w-2/3 pl-5 ">
+      <h3 class="font-bold text-xl text-base leading-7 mt-14">Modern Chair</h3>
+      <div class="flex">
+      <h3 class="text-3xl mt-0.5 leading-10">$250</h3>
+      <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+        <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+          <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+        <div>
+        <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+      </div>
+      </div>
+      <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <!-- size buttons-->
+      <div class="">
+      <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
+      <h5 class="text-sm font-normal leading-5 ">SMALL</h5>
+      </button>
+      <button  class="queen-size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  ">
+      <h5 class="text-sm font-normal text-white leading-5">MEDIUM</h5>
+      </button>
+      <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
+      <h5 class="text-sm font-normal leading-5">LARGE</h5>
+      </button>
+      </div>
+      </article>
+
+        </section>
+
+  
 
   <!-- ========================================row 4 (Cards)-->
   <section class="col-span-3">
