@@ -25,11 +25,10 @@
   </header>
 
   <div class="bg-gray-100 h-full ">
-    <main x-data=" { isOpen : false } "
-    class="mx-64 grid grid-cols-3">
+    <main class="mx-64 grid grid-cols-3">
 
       <!-- top text row 1-->
-      <section class="col-span-3" x-data="{ isActive: ' product1 ' }">
+      <section class="col-span-3" x-data="{ isActive: ' product1 ', isOpen: false , activeVariant: ' variant0 ' , total: 3, current: 0} ">
         <div class="w-full font-normal mt-12">
           <h1 class="font-bold text-4xl pb-4 ">Summer Furniture Sale</h1>
           <p class="text-gray-400 h-24 text-xl font-normal leading-7">Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -40,8 +39,22 @@
         <!-- products chair ==============================(card 1)-->
         <div class="flex">
           <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
-            <div class="">
-              <img class="w-44 h-40 mx-auto mx-10 mt-11" src="chair.jpg" alt="modern chair">
+              <div>
+                  <div 
+                        :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product1'} ">
+                    <button  @click="isActive = null"
+                        :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product1' }">
+                
+                        <p x-show="isActive === 'product1'"
+                        :class="{' text-3xl font-bold ' : isActive === 'product1'  }" > X
+                      </p>
+                    </button>
+                  </div>
+              </div> 
+  
+             <div class="stack-top rounded-2xl overflow-hidden">
+            <!-- <div class=""> -->
+              <img class="w-44 h-40 mx-auto mx-10 mt-11" src="chair-profile.png" alt="modern chair">
               <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Modern Chair</h3>
               <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">All Sizes Available</p>
               <div class="flex justify-between ">
@@ -55,7 +68,8 @@
                     </svg>
                   </div>
                   <div>
-                    <p @click.prevent="isActive = 'product1' " class="font-bold mx-1 text-xs whitespace-nowrap ">View
+                    <p @click.prevent="isActive = 'product1' " 
+                      class="font-bold mx-1 text-xs whitespace-nowrap ">View
                       Details</p>
                   </div>
                 </button>
@@ -65,8 +79,20 @@
 
 
           <!-- products table ======================(card 2)-->
-          <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
-            <div class="">
+        <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
+            <div>
+                <div 
+                      :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product2'} ">
+                  <button  @click="isActive = null"
+                      :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product2' }">
+                    <p x-show="isActive === 'product2'"
+                      :class="{' text-3xl font-bold ' : isActive === 'product2' } " > X
+                    </p>
+                  </button>
+                </div>
+            </div> 
+
+           <div class="stack-top rounded-2xl overflow-hidden">
               <img class="w-44 h-40 mx-auto mx-10 mt-11" src="rustic table.jpg" alt="rustic-table">
               <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Rustic Table</h3>
               <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Great for coffee</p>
@@ -74,45 +100,46 @@
                 <h3 class="font-bold ml-6 mt-4 text-3xl ">$450 </h3>
                 <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
                   <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
-                    <!-- <img class="arrow " src="chevron-down.svg"> -->
                     <svg class="w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none"
                       viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                   <div>
-                    <p @click.prevent="isActive = 'product2' " class="font-bold mx-1 text-xs whitespace-nowrap">View
+                    <p @click.prevent="isActive = 'product2' " 
+                    class="font-bold mx-1 text-xs whitespace-nowrap">View
                       Details</p>
                   </div>
                 </button>
               </div>
             </div>
           </article>
+    
+        
 
           <!-- products  bed (card 3)-->
            <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
             <div>
             <div 
                   :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product3'} ">
-                <button
-                  :class="{ ' close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product3' }">
-                <p 
-                  @click="isOpen = false"
-                  :class="{' text-3xl font-bold ' : isActive === 'product3' }" >X
+                <button  @click="isActive = null"
+                  :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product3' }">
+                <p x-show="isActive === 'product3'"
+                  :class="{' text-3xl font-bold ' : isActive === 'product3' } " > X
 
                 </p>
                 </button>
               </div>
             </div>
 
-            <div class="stack-top rounded-2xl overflow-hidden ">
+            <div class="stack-top rounded-2xl overflow-hidden">
               <img class="w-44 h-40 mx-auto mx-10 mt-11 " src="bed.png">
               <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Sleek Bed</h3>
               <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28 ">Great for sleeping</p>
               <div class="flex justify-between ">
                 <h3 class="font-bold ml-6 mt-4 text-3xl ">$1,000 </h3>
                 <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
-                  <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-10  ">
+                  <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
                     <svg class="w-3 h-3 mx-auto my-auto mt-0.5 " xmlns="http://www.w3.org/2000/svg" fill="none"
                       viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
@@ -131,23 +158,49 @@
 
         <!-- bed description -->
         <article  x-show="isActive === 'product3'"
-                  x-show="isOpen"
                   class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
 
-          <div class="col-span-1 ml-10 w-64 mt-11  ">
-            <img class="w-64 h-44 " src="bed.png">
+          <div  
+                  class="col-span-1 ml-10 w-64 mt-11  ">
+
+            <img    x-show="current === 0" 
+                    class="w-64 h-44 " src="bed.png">
+
+            <img    x-show="current === 1" 
+                    class="w-64 h-44 " src="sleek-mini.png"> 
+                    
+            <img    x-show="current === 2" 
+                    class="w-64 h-44 " src="sleek-mini.png">        
+
+
+            <div>
             <div class="flex pr-8 ">
-              <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+
+              <i        @click="if(current >= 1){ current = current - 1}" >
+
+                 <svg class="w-6 h-6 mt-6 mr-1" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg></i>
-              <img class=" w-16 h-20 mr-2 py-4 " src="sleek-mini.png">
-              <img class=" w-16 h-20  mr-2 py-4 " src="sleek-mini.png">
-              <img class=" w-16 h-20 mr-2 py-4 " src="sleek-mini.png">
-              <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg></i>
+                </svg>
+              </i>
+
+              <img  @click="current = 0, isOpen = true" 
+                    class=" w-16 h-20 mr-2 py-4 " src="bed.png">
+
+              <img  @click="current = 1, isOpen = true" 
+                    class=" w-16 h-20  mr-2 py-4 " src="sleek-mini.png">
+
+              <img  @click="current = 2, isOpen = true" 
+                     class=" w-16 h-20 mr-2 py-4 " src="sleek-mini.png">
+
+
+            <i    @click="if(current < total-1){ current = current + 1}" >
+
+              <svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg></i>
+     
+             </div> 
             </div>
           </div>
 
@@ -155,8 +208,8 @@
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Sleek Bed</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$1,000</h3>
-              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
-                <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4  items-center shadow-md">
+                <div class="w-4 h-4 ml-2 my-auto rounded-full ">
                   <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -169,6 +222,7 @@
                   <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
                 </div>
             </div>
+              </button>
             <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit
               amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -177,16 +231,34 @@
               laborum.</p>
 
             <!-- size buttons-->
-            <div class="">
-              <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
-                <h5 class="text-sm font-normal leading-5 ">KING</h5>
+            <div>
+            
+              <button 
+                        class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                        :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                <h5 
+                      @click.prevent="activeVariant = 'variant0'"
+                      class="text-sm font-normal leading-5 ">SMALL</h5>
               </button>
-              <button class="queen-size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  ">
-                <h5 class="text-sm font-normal text-white leading-5">QUEEN</h5>
+
+              <button 
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                <h5 
+                @click.prevent="activeVariant = 'variant1'"
+                class="text-sm font-normal leading-5">MEDIUM</h5>
               </button>
-              <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
-                <h5 class="text-sm font-normal leading-5">DOUBLE</h5>
+
+
+              <button
+                  class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                  :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+
+                <h5 
+                    @click.prevent="activeVariant = 'variant2'"
+                    class="text-sm font-normal leading-5">LARGE</h5>
               </button>
+
             </div>
         </article>
         <!-- </article> -->
@@ -197,19 +269,50 @@
           x-show="isActive === 'product2' "
           class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
           <div class="col-span-1 ml-10 w-64 mt-11  ">
-            <img class="w-64 h-44 " src="rustic-table2.png">
+
+          
+            <img 
+                    x-show="current === 0" 
+                    class="w-64 h-44 " src="rustic-table2.png">
+
+            <img 
+                    x-show="current === 1" 
+                    class="w-64 h-44 " src="rustic-table2.png">
+
+            <img 
+                    x-show="current === 2" 
+                    class="w-64 h-44 " src="rustic-table2.png">
+
+
             <div class="flex pr-8 ">
-              <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+              <i
+                    @click="if(current >= 1){ current = current - 1}" >
+
+                <svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg></i>
-              <img class=" w-16 h-20 mr-2 py-4 " src="rustic-table2.png">
-              <img class=" w-16 h-20  mr-2 py-4 " src="rustic-table2.png">
-              <img class=" w-16 h-20 mr-2 py-4 " src="rustic-table2.png">
-              <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                </svg>
+              </i>
+
+              <img 
+                  @click="current = 0, isOpen = true" 
+                  class=" w-16 h-20 mr-2 py-4 " src="rustic-table2.png">
+
+              <img 
+                  @click="current = 1, isOpen = true" 
+                  class=" w-16 h-20  mr-2 py-4 " src="rustic-table2.png">
+
+              <img 
+                  @click="current = 2, isOpen = true" 
+                  class=" w-16 h-20 mr-2 py-4 " src="rustic-table2.png">
+
+              <i  @click="if(current < total-1){ current = current + 1}">
+                
+                <svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg></i>
+                </svg>
+               </i>
             </div>
           </div>
 
@@ -217,7 +320,7 @@
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Rustic Table</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$450</h3>
-              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 mr-4 items-center shadow-md">
                 <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
                   <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -238,45 +341,91 @@
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
               laborum.</p>
 
-            <div class="">
-              <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
-                <h5 class="text-sm font-normal leading-5 ">SMALL</h5>
-              </button>
-              <button class="queen-size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  ">
-                <h5 class="text-sm font-normal text-white leading-5">MEDIUM</h5>
-              </button>
-              <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
-                <h5 class="text-sm font-normal leading-5">LARGE</h5>
-              </button>
-            </div>
+              <div>
+            
+                <button 
+                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                          :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                  <h5 
+                        @click.prevent="activeVariant = 'variant0'"
+                        class="text-sm font-normal leading-5 ">SMALL</h5>
+                </button>
+  
+                <button 
+                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                      :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                  <h5 
+                  @click.prevent="activeVariant = 'variant1'"
+                  class="text-sm font-normal leading-5">MEDIUM</h5>
+                </button>
+  
+  
+                <button
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+  
+                  <h5 
+                      @click.prevent="activeVariant = 'variant2'"
+                      class="text-sm font-normal leading-5">LARGE</h5>
+                </button>
+  
+              </div>
         </article>
 
 
 
         <!-- description  modern chair -->
 
-        <article x-show="isActive === 'product1' "
-          class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
-          <div class="col-span-1 ml-10 w-64 mt-11  ">
-            <img class="w-64 h-44 " src="chair2.png">
+        <article 
+                  x-show="isActive === 'product1' "
+                  class="grid grid-cols-3 flex mt-8 product-container mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+                
+          <div class="col-span-1 ml-10 w-64 mt-11 h-72 ">
+
+            <img 
+                x-show="current === 0"       
+                class="w-64 h-44 " src="chair-profile.png">
+
+            <img 
+                x-show="current === 1" 
+                class=" w-64 h-44  " src="modern-chair2.png">
+
+            <img 
+                x-show="current === 2" 
+                class="w-64 h-44 " src="modern-chair3.png"> 
+
             <div class="flex pr-8 ">
-              <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+              <i @click="if(current >= 1){ current = current - 1}"><svg 
+                  class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg></i>
-              <img class=" w-16 h-20 mr-2 py-4 " src="chair2.png">
-              <img class=" w-16 h-20  mr-2 py-4 " src="chair2.png">
-              <img class=" w-16 h-20 mr-2 py-4 " src="chair2.png">
-              <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+              </i>
+
+              <img  
+                  @click="current = 0, isOpen = true" 
+                  class=" w-16 h-20 mr-2 py-4 " src="chair-profile.png">
+              <img  
+                  @click="current = 1, isOpen = true" 
+                  class=" w-16 h-20  mr-2 py-4 " src="modern-chair2.png">
+              <img 
+                  @click="current = 2, isOpen = true" 
+                  class=" w-16 h-20 mr-2 py-4 " src="modern-chair3.png">
+
+  
+              <i @click="if(current < total-1){ current = current + 1}">
+                <svg 
+                  class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg></i>
+                </svg>
+             </i>
             </div>
           </div>
 
-          <!-- modern chair explained row 3 (col 2)-->
-
-          <div class="w-2/3 pl-5 ">
+      
+<!-- 1st column ends here -->
+          <div class=" pl-5 h-72 col-span-2">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Modern Chair</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$250</h3>
@@ -302,28 +451,76 @@
               laborum.</p>
 
             <!-- size buttons-->
-            <div class="">
-              <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
-                <h5 class="text-sm font-normal leading-5 ">SMALL</h5>
+            <div>
+            
+              <button 
+                        class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                        :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                <h5 
+                      @click.prevent="activeVariant = 'variant0'"
+                      class="text-sm font-normal leading-5 ">SMALL</h5>
               </button>
-              <button class="queen-size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  ">
-                <h5 class="text-sm font-normal text-white leading-5">MEDIUM</h5>
+
+              <button 
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                <h5 
+                @click.prevent="activeVariant = 'variant1'"
+                class="text-sm font-normal leading-5">MEDIUM</h5>
               </button>
-              <button class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 ">
-                <h5 class="text-sm font-normal leading-5">LARGE</h5>
+
+
+              <button
+                  class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                  :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+
+                <h5 
+                    @click.prevent="activeVariant = 'variant2'"
+                    class="text-sm font-normal leading-5">LARGE</h5>
               </button>
             </div>
+            </div>
+         
+
+      
+
+         
+           <!-- CUSTOMER REVIEWS -->
+            <div class="mt-12 ">
+            <h3 class="text-xl font-bold" >Rating</h3>
+            <p class=" text-sm font-normal text-gray-400">Average Rating 5.0</p>
+            <h3 class="text-xl font-bold">Customer Reviews</h3>
+            <div>
+            
+              <p>"The best bed around the block"</p>
+              <p>Ryan Chenkie, Bed expert </p>
+            </div>
+          </div> 
+        
+
         </article>
 
-      </section>
 
-
-
-      <!-- ========================================row 4 (Cards)-->
-      <section class="col-span-3">
+      <!-- ========================================row 2 (ACCENT LAMP)--> 
+    
         <div class="flex">
-          <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
-            <div class="">
+
+            <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
+              <div>
+              <div 
+                    :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product4'} ">
+                  <button  @click="isActive = null"
+                    :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product4' }">
+                  <p x-show="isActive === 'product4'"
+                    :class="{' text-3xl font-bold ' : isActive === 'product4' } " > X
+  
+                  </p>
+                  </button>
+                </div>
+              </div>
+  
+              <div class="stack-top rounded-2xl overflow-hidden">
+            <!-- <div class=""> -->
               <img class="w-44 h-40 mx-auto mx-10 mt-11" src="lamp.jpg" alt="lamp">
               <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Accent Lamp</h3>
               <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Lightbulb included</p>
@@ -338,71 +535,357 @@
                     </svg>
                   </div>
                   <div>
-                    <p class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
+                    <p 
+                    @click.prevent="isActive = 'product4' " 
+                    class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
                   </div>
                 </button>
               </div>
             </div>
           </article>
 
+           <!--  products row 2 (card BAR STOOL)-->
+           <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
+            <div>
+            <div 
+                  :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product5'} ">
+                <button  @click="isActive = null"
+                  :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product5' }">
+                <p x-show="isActive === 'product5'"
+                  :class="{' text-3xl font-bold ' : isActive === 'product5' } " > X
 
-          <!--  products row 4 (card 2)-->
-          <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
-            <div class="">
-              <img class="w-44 h-40 mx-auto mx-10 mt-11" src="bar-stool.jpg" alt="bar-stool">
-              <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Bar Stool</h3>
-              <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Industrial style</p>
-              <div class="flex justify-between ">
-                <h3 class="font-bold ml-6 mt-4 text-3xl ">$150 </h3>
-                <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
-                  <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
-                    <!-- <img class="arrow " src="chevron-down.svg"> -->
-                    <svg class="w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none"
-                      viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
-                  </div>
+                </p>
                 </button>
               </div>
             </div>
-          </article>
 
-          <!-- products row 4 (card 3)-->
+            <div class="stack-top rounded-2xl overflow-hidden">
+          <!-- <div class=""> -->
+            <img class="w-44 h-40 mx-auto mx-10 mt-11" src="bar-stool.jpg" alt="bar-stool">
+            <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Bar Stool</h3>
+            <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Industrial style</p>
+            <div class="flex justify-between ">
+              <h3 class="font-bold ml-6 mt-4 text-3xl ">$150 </h3>
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+                <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+                  <!-- <img class="arrow " src="chevron-down.svg"> -->
+                  <svg class="w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div>
+                  <p 
+                  @click.prevent="isActive = 'product5' " 
+                  class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </article>
 
-          <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
-            <div class="">
-              <img class="w-44 h-40 mx-auto mx-10 mt-11" src="velvet-sofa.jpg" alt="velvet-sofa">
-              <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Velvet Sofa</h3>
-              <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Navy blue</p>
-              <div class="flex justify-between ">
-                <h3 class="font-bold ml-6 mt-4 text-3xl ">$550 </h3>
-                <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
-                  <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
-                    <!-- <img class="arrow " src="chevron-down.svg"> -->
-                    <svg class="w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none"
-                      viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
-                  </div>
+        <!-- products row 2 (card  SOFA)-->
+
+        <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
+          <div>
+            <div 
+                  :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product6'} ">
+                <button  @click="isActive = null"
+                  :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product6' }">
+                <p x-show="isActive === 'product6'"
+                  :class="{' text-3xl font-bold ' : isActive === 'product6' } " > X
+
+                </p>
                 </button>
               </div>
             </div>
-          </article>
+
+            <div class="stack-top rounded-2xl overflow-hidden">
+          <!-- <div class=""> -->
+            <img class="w-44 h-40 mx-auto mx-10 mt-11" src="velvet-sofa.jpg" alt="velvet-sofa">
+            <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Velvet Sofa</h3>
+            <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Navy blue</p>
+            <div class="flex justify-between ">
+              <h3 class="font-bold ml-6 mt-4 text-3xl ">$550 </h3>
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+                <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+                  <!-- <img class="arrow " src="chevron-down.svg"> -->
+                  <svg class="w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div>
+                  <p 
+                  @click.prevent="isActive = 'product6' " 
+                  class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </article>
         </div>
-      </section>
+
+<!-- accent lamp description  -->
+          <article 
+          x-show="isActive === 'product4' "
+          class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+          <div class="col-span-1 ml-10 w-64 mt-11  ">
+            <img class="w-64 h-44 " src="lamp-mini.png">
+            <div class="flex pr-8 ">
+              <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg></i>
+              <img class=" w-16 h-20 mr-2 py-4 " src="lamp-mini.png">
+              <img class=" w-16 h-20  mr-2 py-4 " src="lamp-mini.png">
+              <img class=" w-16 h-20 mr-2 py-4 " src="lamp-mini.png">
+              <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg></i>
+            </div>
+          </div>
+
+          <div class="w-2/3 pl-5 ">
+            <h3 class="font-bold text-xl text-base leading-7 mt-14">Accent Lamp</h3>
+            <div class="flex">
+              <h3 class="text-3xl mt-0.5 leading-10">$75</h3>
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+                <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+                  <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                  </svg>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+                </div>
+            </div>
+            <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.</p>
+
+              <div>
+            
+                <button 
+                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                          :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                  <h5 
+                        @click.prevent="activeVariant = 'variant0'"
+                        class="text-sm font-normal leading-5 ">SMALL</h5>
+                </button>
+  
+                <button 
+                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                      :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                  <h5 
+                  @click.prevent="activeVariant = 'variant1'"
+                  class="text-sm font-normal leading-5">MEDIUM</h5>
+                </button>
+  
+  
+                <button
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+  
+                  <h5 
+                      @click.prevent="activeVariant = 'variant2'"
+                      class="text-sm font-normal leading-5">LARGE</h5>
+                </button>
+  
+              </div>
+        </article>
 
 
-      <!-- =================================products row 5 (cards)-->
-      <section class="col-span-3 mb-16">
-        <div class="flex">
+<!-- BAR STOOL DESCRIPTION -->
+
+<article 
+          x-show="isActive === 'product5' "
+          class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+          <div class="col-span-1 ml-10 w-64 mt-11  ">
+            <img class="w-64 h-44 " src="bar-stool mini .png">
+            <div class="flex pr-8 ">
+              <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg></i>
+              <img class=" w-16 h-20 mr-2 py-4 " src="bar-stool mini .png">
+              <img class=" w-16 h-20  mr-2 py-4 " src="bar-stool mini .png">
+              <img class=" w-16 h-20 mr-2 py-4 " src="bar-stool mini .png">
+              <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg></i>
+            </div>
+          </div>
+
+          <div class="w-2/3 pl-5 ">
+            <h3 class="font-bold text-xl text-base leading-7 mt-14">Bar Stool</h3>
+            <div class="flex">
+              <h3 class="text-3xl mt-0.5 leading-10">$150</h3>
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+                <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+                  <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                  </svg>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+                </div>
+            </div>
+            <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.</p>
+
+              <div>
+            
+                <button 
+                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                          :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                  <h5 
+                        @click.prevent="activeVariant = 'variant0'"
+                        class="text-sm font-normal leading-5 ">SMALL</h5>
+                </button>
+  
+                <button 
+                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                      :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                  <h5 
+                  @click.prevent="activeVariant = 'variant1'"
+                  class="text-sm font-normal leading-5">MEDIUM</h5>
+                </button>
+  
+  
+                <button
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+  
+                  <h5 
+                      @click.prevent="activeVariant = 'variant2'"
+                      class="text-sm font-normal leading-5">LARGE</h5>
+                </button>
+  
+              </div>
+        </article>
+
+
+
+<!-- SOFA DESCRIPTION-->
+          <article 
+          x-show="isActive === 'product6' "
+          class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+          <div class="col-span-1 ml-10 w-64 mt-11  ">
+            <img class="w-64 h-44 " src="velvet-sofa-mini.png">
+            <div class="flex pr-8 ">
+              <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg></i>
+              <img class=" w-16 h-20 mr-2 py-4 " src="velvet-sofa-mini.png">
+              <img class=" w-16 h-20  mr-2 py-4 " src="velvet-sofa-mini.png">
+              <img class=" w-16 h-20 mr-2 py-4 " src="velvet-sofa-mini.png">
+              <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg></i>
+            </div>
+          </div>
+
+          <div class="w-2/3 pl-5 ">
+            <h3 class="font-bold text-xl text-base leading-7 mt-14">Velvet Sofa</h3>
+            <div class="flex">
+              <h3 class="text-3xl mt-0.5 leading-10">$550</h3>
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+                <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+                  <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                  </svg>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+                </div>
+            </div>
+            <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.</p>
+
+              <div>
+            
+                <button 
+                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                          :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                  <h5 
+                        @click.prevent="activeVariant = 'variant0'"
+                        class="text-sm font-normal leading-5 ">SMALL</h5>
+                </button>
+  
+                <button 
+                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                      :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                  <h5 
+                  @click.prevent="activeVariant = 'variant1'"
+                  class="text-sm font-normal leading-5">MEDIUM</h5>
+                </button>
+  
+  
+                <button
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+  
+                  <h5 
+                      @click.prevent="activeVariant = 'variant2'"
+                      class="text-sm font-normal leading-5">LARGE</h5>
+                </button>
+  
+              </div>
+        </article>
+
+
+        <!-- </div> -->
+      <!-- </section> -->
+
+
+      <!-- =================================products row 3 (GOLD DESK)-->
+      
+      <!-- <section class=""> -->
+        <div class="col-span-3 mb-16 flex">
           <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
-            <div class="">
+            <div>
+              <div 
+                    :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product7'} ">
+                  <button  @click="isActive = null"
+                    :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product7' }">
+                  <p x-show="isActive === 'product7'"
+                    :class="{' text-3xl font-bold ' : isActive === 'product7' } " > X
+  
+                  </p>
+                  </button>
+                </div>
+              </div>
+  
+              <div class="stack-top rounded-2xl overflow-hidden">
+            <!-- <div class=""> -->
               <img class="w-44 h-40 mx-auto mx-10 mt-11" src="desk.jpg" alt="desk">
               <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Gold Accent Desk</h3>
               <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Great for writing</p>
@@ -417,7 +900,9 @@
                     </svg>
                   </div>
                   <div>
-                    <p class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
+                    <p 
+                    @click.prevent="isActive = 'product7'"
+                    class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
                   </div>
                 </button>
               </div>
@@ -425,9 +910,23 @@
           </article>
 
 
-          <!--  products row 5 (card 2)-->
+          <!--  products row 3 (GLASS SIDE TABLE)-->
           <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
-            <div class="">
+            <div>
+              <div 
+                    :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product8'} ">
+                  <button  @click="isActive = null"
+                    :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product8' }">
+                  <p x-show="isActive === 'product8'"
+                    :class="{' text-3xl font-bold ' : isActive === 'product8' } " > X
+  
+                  </p>
+                  </button>
+                </div>
+              </div>
+  
+              <div class="stack-top rounded-2xl overflow-hidden">
+            <!-- <div class=""> -->
               <img class="w-44 h-40 mx-auto mx-10 mt-11" src="glass-table.jpg" alt="glass table">
               <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Glass Side Table</h3>
               <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Metallic silver</p>
@@ -442,17 +941,33 @@
                     </svg>
                   </div>
                   <div>
-                    <p class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
+                    <p 
+                    @click.prevent="isActive = 'product8'"
+                    class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
                   </div>
                 </button>
               </div>
             </div>
           </article>
 
-          <!-- products row 5 (card 3)-->
+          <!-- products row 3 (CEILING LIGHT)-->
 
           <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
-            <div class="">
+            <div>
+              <div 
+                    :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product9'} ">
+                  <button  @click="isActive = null"
+                    :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product9' }">
+                  <p x-show="isActive === 'product9'"
+                    :class="{' text-3xl font-bold ' : isActive === 'product9' } " > X
+  
+                  </p>
+                  </button>
+                </div>
+              </div>
+  
+              <div class="stack-top rounded-2xl overflow-hidden">
+            <!-- <div class=""> -->
               <img class="w-44 h-40 mx-auto mx-10 mt-11" src="ceiling-light.jpg" alt="ceiling light">
               <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Ceiling Light</h3>
               <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Great for bedrooms</p>
@@ -467,15 +982,621 @@
                     </svg>
                   </div>
                   <div>
-                    <p class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
+                    <p 
+                    @click.prevent="isActive = 'product9'"
+                    class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
                   </div>
                 </button>
               </div>
             </div>
           </article>
-        </div>
-      </section>
+      </div>
 
+<!-- gold accent desk description -->
+
+<article 
+          x-show="isActive === 'product7' "
+          class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+          <div class="col-span-1 ml-10 w-64 mt-11  ">
+            <img class="w-64 h-44 " src="desk-mini.png">
+            <div class="flex pr-8 ">
+              <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg></i>
+              <img class=" w-16 h-20 mr-2 py-4 " src="desk-mini.png">
+              <img class=" w-16 h-20  mr-2 py-4 " src="desk-mini.png">
+              <img class=" w-16 h-20 mr-2 py-4 " src="desk-mini.png">
+              <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg></i>
+            </div>
+          </div>
+
+          <div class="w-2/3 pl-5 ">
+            <h3 class="font-bold text-xl text-base leading-7 mt-14">Gold Accent Desk</h3>
+            <div class="flex">
+              <h3 class="text-3xl mt-0.5 leading-10">$250</h3>
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+                <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+                  <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                  </svg>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+                </div>
+            </div>
+            <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.</p>
+
+              <div>
+            
+                <button 
+                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                          :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                  <h5 
+                        @click.prevent="activeVariant = 'variant0'"
+                        class="text-sm font-normal leading-5 ">SMALL</h5>
+                </button>
+  
+                <button 
+                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                      :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                  <h5 
+                  @click.prevent="activeVariant = 'variant1'"
+                  class="text-sm font-normal leading-5">MEDIUM</h5>
+                </button>
+  
+  
+                <button
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+  
+                  <h5 
+                      @click.prevent="activeVariant = 'variant2'"
+                      class="text-sm font-normal leading-5">LARGE</h5>
+                </button>
+  
+              </div>
+        </article>
+
+        <!-- glass side table description -->
+
+        <article 
+          x-show="isActive === 'product8' "
+          class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+          <div class="col-span-1 ml-10 w-64 mt-11  ">
+            <img class="w-64 h-44 " src="glass-table-mini.png">
+            <div class="flex pr-8 ">
+              <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg></i>
+              <img class=" w-16 h-20 mr-2 py-4 " src="glass-table-mini.png">
+              <img class=" w-16 h-20  mr-2 py-4 " src="glass-table-mini.png">
+              <img class=" w-16 h-20 mr-2 py-4 " src="glass-table-mini.png">
+              <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg></i>
+            </div>
+          </div>
+
+          <div class="w-2/3 pl-5 ">
+            <h3 class="font-bold text-xl text-base leading-7 mt-14">Glass Side Table</h3>
+            <div class="flex">
+              <h3 class="text-3xl mt-0.5 leading-10">$300</h3>
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+                <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+                  <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                  </svg>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+                </div>
+            </div>
+            <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.</p>
+
+              <div>
+            
+                <button 
+                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                          :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                  <h5 
+                        @click.prevent="activeVariant = 'variant0'"
+                        class="text-sm font-normal leading-5 ">SMALL</h5>
+                </button>
+  
+                <button 
+                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                      :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                  <h5 
+                  @click.prevent="activeVariant = 'variant1'"
+                  class="text-sm font-normal leading-5">MEDIUM</h5>
+                </button>
+  
+  
+                <button
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+  
+                  <h5 
+                      @click.prevent="activeVariant = 'variant2'"
+                      class="text-sm font-normal leading-5">LARGE</h5>
+                </button>
+  
+              </div>
+        </article>
+
+
+        <!-- ceiling light description-->
+
+        <article 
+        x-show="isActive === 'product9' "
+        class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+        <div class="col-span-1 ml-10 w-64 mt-11  ">
+          <img class="w-64 h-44 " src="ceiling-light-mini.png">
+          <div class="flex pr-8 ">
+            <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg></i>
+            <img class=" w-16 h-20 mr-2 py-4 " src="ceiling-light-mini.png">
+            <img class=" w-16 h-20  mr-2 py-4 " src="ceiling-light-mini.png">
+            <img class=" w-16 h-20 mr-2 py-4 " src="ceiling-light-mini.png">
+            <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg></i>
+          </div>
+        </div>
+
+        <div class="w-2/3 pl-5 ">
+          <h3 class="font-bold text-xl text-base leading-7 mt-14">Ceiling Light</h3>
+          <div class="flex">
+            <h3 class="text-3xl mt-0.5 leading-10">$130</h3>
+            <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+              <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+                <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+              </div>
+          </div>
+          <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+
+            <div>
+            
+              <button 
+                        class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                        :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                <h5 
+                      @click.prevent="activeVariant = 'variant0'"
+                      class="text-sm font-normal leading-5 ">SMALL</h5>
+              </button>
+
+              <button 
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                <h5 
+                @click.prevent="activeVariant = 'variant1'"
+                class="text-sm font-normal leading-5">MEDIUM</h5>
+              </button>
+
+
+              <button
+                  class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                  :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+
+                <h5 
+                    @click.prevent="activeVariant = 'variant2'"
+                    class="text-sm font-normal leading-5">LARGE</h5>
+              </button>
+
+            </div>
+      </article>
+
+  <!-- ROW 4 CARD 10===============================-->
+
+  <div class="col-span-3 mb-16 flex">
+    <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md">
+      <div>
+        <div 
+              :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product10'} ">
+            <button  @click="isActive = null"
+              :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product10' }">
+            <p x-show="isActive === 'product10'"
+              :class="{' text-3xl font-bold ' : isActive === 'product10' } " > X
+
+            </p>
+            </button>
+          </div>
+        </div>
+
+        <div class="stack-top rounded-2xl overflow-hidden">
+      <!-- <div class=""> -->
+        <img class="w-44 h-40 mx-auto mx-10 mt-11" src="rug.png" alt="rug">
+        <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Trendy Rug</h3>
+        <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">All sizes available</p>
+        <div class="flex justify-between ">
+          <h3 class="font-bold ml-6 mt-4 text-3xl ">$250 </h3>
+          <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+            <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+              <!-- <img class="arrow " src="chevron-down.svg"> -->
+              <svg class="w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div>
+              <p 
+              @click.prevent="isActive = 'product10'"
+              class="font-bold mx-1 text-xs whitespace-nowrap ">View Details</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </article>
+
+
+    <!--  products row 4 (card 11)-->
+    <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
+      <div>
+        <div 
+              :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product11'} ">
+            <button  @click="isActive = null"
+              :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product11' }">
+            <p x-show="isActive === 'product11'"
+              :class="{' text-3xl font-bold ' : isActive === 'product11' } " > X
+
+            </p>
+            </button>
+          </div>
+        </div>
+
+        <div class="stack-top rounded-2xl overflow-hidden">
+      <!-- <div class=""> -->
+        <img class="w-44 h-40 mx-auto mx-10 mt-11" src="chandelier.png" alt="chandelier">
+        <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Chandelier</h3>
+        <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">Crystal</p>
+        <div class="flex justify-between ">
+          <h3 class="font-bold ml-6 mt-4 text-3xl ">$360 </h3>
+          <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+            <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+              <!-- <img class="arrow " src="chevron-down.svg"> -->
+              <svg class="w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div>
+              <p 
+              @click.prevent="isActive = 'product11'"
+              class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- products row 4 (Card 12)-->
+
+    <article class="col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md ">
+      <div>
+        <div 
+              :class="{ 'card-cover rounded-2xl absolute ' : isActive === 'product12'} ">
+            <button  @click="isActive = null"
+              :class="{ 'z-100 close-button w-20 h-20 rounded-full ml-24 mt-36 text-white border-2 border-white ' : isActive === 'product12' }">
+            <p x-show="isActive === 'product12'"
+              :class="{' text-3xl font-bold ' : isActive === 'product12' } " > X
+
+            </p>
+            </button>
+          </div>
+        </div>
+
+        <div class="stack-top rounded-2xl overflow-hidden">
+      <!-- <div class=""> -->
+        <img class="w-44 h-40 mx-auto mx-10 mt-11" src="gold-clock.png" alt="clock">
+        <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Gold Metal Clock</h3>
+        <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">All sizes available</p>
+        <div class="flex justify-between ">
+          <h3 class="font-bold ml-6 mt-4 text-3xl ">$220 </h3>
+          <button href="#" class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md">
+            <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
+              <!-- <img class="arrow " src="chevron-down.svg"> -->
+              <svg class="w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1) ">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div>
+              <p 
+              @click.prevent="isActive = 'product12'"
+              class="font-bold mx-1 text-xs whitespace-nowrap">View Details</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </article>
+</div>
+
+<!-- ROW 5 DESCRIPTION card 10 rug -->
+
+
+<article 
+          x-show="isActive === 'product10' "
+          class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+          <div class="col-span-1 ml-10 w-64 mt-11  ">
+            <img class="w-64 h-44 " src="rug.png">
+            <div class="flex pr-8 ">
+              <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg></i>
+              <img class=" w-16 h-20 mr-2 py-4 " src="rug.png">
+              <img class=" w-16 h-20  mr-2 py-4 " src="rug.png">
+              <img class=" w-16 h-20 mr-2 py-4 " src="rug.png">
+              <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg></i>
+            </div>
+          </div>
+
+          <div class="w-2/3 pl-5 ">
+            <h3 class="font-bold text-xl text-base leading-7 mt-14">Trendy Rug</h3>
+            <div class="flex">
+              <h3 class="text-3xl mt-0.5 leading-10">$250</h3>
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+                <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+                  <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                  </svg>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+                </div>
+            </div>
+            <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.</p>
+
+              <div>
+            
+                <button 
+                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                          :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                  <h5 
+                        @click.prevent="activeVariant = 'variant0'"
+                        class="text-sm font-normal leading-5 ">SMALL</h5>
+                </button>
+  
+                <button 
+                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                      :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                  <h5 
+                  @click.prevent="activeVariant = 'variant1'"
+                  class="text-sm font-normal leading-5">MEDIUM</h5>
+                </button>
+  
+  
+                <button
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+  
+                  <h5 
+                      @click.prevent="activeVariant = 'variant2'"
+                      class="text-sm font-normal leading-5">LARGE</h5>
+                </button>
+  
+              </div>
+        </article>
+
+        <!-- card 11 chandelier description -->
+
+        <article 
+          x-show="isActive === 'product11' "
+          class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+          <div class="col-span-1 ml-10 w-64 mt-11  ">
+            <img class="w-64 h-44 " src="chandelier.png">
+            <div class="flex pr-8 ">
+              <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg></i>
+              <img class=" w-16 h-20 mr-2 py-4 " src="chandelier.png">
+              <img class=" w-16 h-20  mr-2 py-4 " src="chandelier.png">
+              <img class=" w-16 h-20 mr-2 py-4 " src="chandelier.png">
+              <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg></i>
+            </div>
+          </div>
+
+          <div class="w-2/3 pl-5 ">
+            <h3 class="font-bold text-xl text-base leading-7 mt-14">Chandelier</h3>
+            <div class="flex">
+              <h3 class="text-3xl mt-0.5 leading-10">$360</h3>
+              <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+                <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+                  <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                  </svg>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+                </div>
+            </div>
+            <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.</p>
+
+              <div>
+            
+                <button 
+                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                          :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                  <h5 
+                        @click.prevent="activeVariant = 'variant0'"
+                        class="text-sm font-normal leading-5 ">SMALL</h5>
+                </button>
+  
+                <button 
+                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                      :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                  <h5 
+                  @click.prevent="activeVariant = 'variant1'"
+                  class="text-sm font-normal leading-5">MEDIUM</h5>
+                </button>
+  
+  
+                <button
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+  
+                  <h5 
+                      @click.prevent="activeVariant = 'variant2'"
+                      class="text-sm font-normal leading-5">LARGE</h5>
+                </button>
+  
+              </div>
+        </article>
+
+
+        <!-- card 12 description-->
+
+        <article 
+        x-show="isActive === 'product12' "
+        class="col-span-3 flex mt-8 h-80 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
+        <div class="col-span-1 ml-10 w-64 mt-11  ">
+          <img class="w-64 h-44 " src="gold-clock.png">
+          <div  class="flex pr-8 ">
+
+            <i><svg class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+           </svg></i>
+
+    
+           <img 
+            class=" w-16 h-20 mr-2 py-4 " src="gold-clock.png">
+           <img 
+           class=" w-16 h-20  mr-2 py-4 " src="gold-clock.png">
+           <img 
+           class=" w-16 h-20 mr-2 py-4 " src="gold-clock.png">
+  
+            <i><svg class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg></i>
+
+          </div>
+        </div>
+
+        <div class="w-2/3 pl-5 ">
+          <h3 class="font-bold text-xl text-base leading-7 mt-14">Gold Metal Clock</h3>
+          <div class="flex">
+            <h3 class="text-3xl mt-0.5 leading-10">$220</h3>
+            <button href="#" class="blue-button rounded-2xl w-28 h-8 flex ml-4 items-center shadow-md">
+              <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+                <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
+              </div>
+          </div>
+          <p class="bed-description text-sm font-normal text-gray-400 mb-5 mr-20 leading-5  ">Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+
+            <div>
+            
+              <button 
+                        class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                        :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+                <h5 
+                      @click.prevent="activeVariant = 'variant0'"
+                      class="text-sm font-normal leading-5 ">SMALL</h5>
+              </button>
+
+              <button 
+                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5  "
+                    :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+                <h5 
+                @click.prevent="activeVariant = 'variant1'"
+                class="text-sm font-normal leading-5">MEDIUM</h5>
+              </button>
+
+
+              <button
+                  class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 "
+                  :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+
+                <h5 
+                    @click.prevent="activeVariant = 'variant2'"
+                    class="text-sm font-normal leading-5">LARGE</h5>
+              </button>
+
+            </div>
+      </article>
+
+      </section>
 
 
 
