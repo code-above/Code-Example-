@@ -23,6 +23,7 @@ h3 {
 
 }
 
+
 .blue-button {
     background: linear-gradient(90deg, #9CE7FF 0%, #48BDEF 100%);
    
@@ -67,4 +68,7 @@ h3 {
 }
 
 
-
+.splide__slide img {
+	width : 100%;
+	height: auto;
+}

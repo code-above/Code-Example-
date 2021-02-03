@@ -9,7 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <style rel="stylesheet" href="splide-core.min.css"></style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  
+  <script src="splide.js"></script>
+
+  
 </head>
 
 <body>
@@ -380,40 +387,96 @@
                   x-show="isActive === 'product1' "
                   class="grid grid-cols-3 flex mt-8 product-container mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
                 
-          <div class="col-span-1 ml-10 w-64 mt-11 h-72 ">
+          <div class="col-span-1 ml-10 w-64 mt-24 h-72 ">
+
+            <!-- <img 
+                  
+                class="w-64 h-44  " src="chair-profile.png">
 
             <img 
-                x-show="current === 0"       
-                class="w-64 h-44 " src="chair-profile.png">
-
-            <img 
-                x-show="current === 1" 
+               
                 class=" w-64 h-44  " src="modern-chair2.png">
 
             <img 
-                x-show="current === 2" 
+              
                 class="w-64 h-44 " src="modern-chair3.png"> 
 
-            <div class="flex pr-8 ">
-              <i @click="if(current >= 1){ current = current - 1}"><svg 
+            <div class="flex pr-8 mt-10">
+              <i><svg 
                   class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
-              </i>
+              </i> -->
+              <!-- THUMBNAIL IMAGES-->
+       <!-- <div class=""" >      -->
 
+        <div id="primary-slider" class=" splide w-64 h-52 ">
+          <div class="splide__track ">
+            <ul class="splide__list ">
+              <li class="splide__slide w-64 h-52">
+
+                <img class="w-64 h-48 "src="chair-profile.png">
+
+              </li>
+              <li class="splide__slide w-64 h-52">
+
+              <img src="modern-chair2.png">
+
+              </li>
+              <li class="splide__slide w-64 h-52">
+
+                <img src="modern-chair3.png">
+
+              </li>
+            </ul>
+          </div>
+        </div>
+
+          <div id="secondary-slider" class="splide w-64  mt-12">
+            <div class="splide__track ">
+              <ul class="splide__list">
+                <li class="splide__slide w-64 ">
+
+                  <img class="" src="chair-profile.png">
+
+                </li>
+                <li class="splide__slide " >
+
+                <img class="" src="modern-chair2.png">
+
+                </li>
+                <li class="splide__slide">
+
+                  <img class="" src="modern-chair3.png">
+
+                </li>
+              </ul>
+            </div>
+          
+
+          
+        </div>
+      </div>
+    <!-- </div>   -->
+
+
+              <!-- <img  
+                   
+                  class=" w-14 h-9 mr-2  " src="chair-profile.png">
+          </div>
+          <div class="w-16 h-16 bg-gray-100 mr-4 rounded-lg flex items-center">
               <img  
-                  @click="current = 0, isOpen = true" 
-                  class=" w-16 h-20 mr-2 py-4 " src="chair-profile.png">
-              <img  
-                  @click="current = 1, isOpen = true" 
-                  class=" w-16 h-20  mr-2 py-4 " src="modern-chair2.png">
+                 
+                  class="w-14 h-9 mr-2 " src="modern-chair2.png">
+          </div>
+          <div class="w-16 h-16 bg-gray-100  rounded-lg flex items-center">
               <img 
                   @click="current = 2, isOpen = true" 
-                  class=" w-16 h-20 mr-2 py-4 " src="modern-chair3.png">
-
+                  class="  w-14 h-9 mr-2 " src="modern-chair3.png">
+          </div>
   
-              <i @click="if(current < total-1){ current = current + 1}">
+              <i>
                 <svg 
                   class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
@@ -421,11 +484,11 @@
                 </svg>
              </i>
             </div>
-          </div>
+          </div> -->
 
       
-<!-- 1st column ends here -->
-          <div class=" pl-5 h-72 col-span-2">
+<!-- 2ND COLS-->
+          <div class=" pl-5 h-72 col-span-2 mt-28">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Modern Chair</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$250</h3>
@@ -482,18 +545,28 @@
             </div>
          
 
-      
-
-         
            <!-- CUSTOMER REVIEWS -->
-            <div class="mt-12 ">
-            <h3 class="text-xl font-bold" >Rating</h3>
+            <div class=" ml-9">
+            <h3 class="text-xl font-bold" >Rating
+              <svg class="w-5 h-5  flex" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5  flex" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5 flex" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5 flex" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5 flex" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </h3>
             <p class=" text-sm font-normal text-gray-400">Average Rating 5.0</p>
-            <h3 class="text-xl font-bold">Customer Reviews</h3>
-            <div>
-            
-              <p>"The best bed around the block"</p>
-              <p>Ryan Chenkie, Bed expert </p>
+            <h3 class="text-xl font-bold mt-3.5 h-9 ">Customer Reviews</h3>
+            <div class="bg-white shadow-lg rounded-lg flex items-center mb-2 w-80">   
+                <img class="w-9 h-9 rounded-full ml-3 my-2 mr-2.5" src="dp.jpg">
+                     
+              <p class="text-sm font-normal text-gray-400 ">"The best bed around the block." <br><span class="text-xs ml-2">Sonia Gill, Bed Expert</span>
+                <svg class="w-3.5 h-3.5 flex" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-3.5 h-3.5 flex" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-3.5 h-3.5 flex" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-3.5 h-3.5 flex" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-3.5 h-3.5 flex" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              </p>
+             
             </div>
           </div> 
         

@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "serve": "^11.3.2"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^2.4.21"
   }
 }
