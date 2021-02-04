@@ -9,17 +9,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <style rel="stylesheet" href="splide-core.min.css"></style>
+  <link rel="stylesheet" href="splide.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-  
   <script src="splide.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>  
 
   
 </head>
 
 <body>
+
   <header>
     <div class="gradient h-60 w-full">
       <div class="flex items-center">
@@ -381,113 +381,59 @@
 
 
 
-        <!-- description  modern chair -->
+        <!-- description  modern chair  (1st col)-->
 
         <article 
                   x-show="isActive === 'product1' "
                   class="grid grid-cols-3 flex mt-8 product-container mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200 ">
                 
-          <div class="col-span-1 ml-10 w-64 mt-24 h-72 ">
+      <div class="col-span-1 w-64 mt-24 ml-10 h-60 ">
+        <!-- primary slider -->
+        <div id="primary-slider" class=" splide  ">
+          <div class="splide__track">
+            <ul class="splide__list  ">
 
-            <!-- <img 
-                  
-                class="w-64 h-44  " src="chair-profile.png">
-
-            <img 
-               
-                class=" w-64 h-44  " src="modern-chair2.png">
-
-            <img 
-              
-                class="w-64 h-44 " src="modern-chair3.png"> 
-
-            <div class="flex pr-8 mt-10">
-              <i><svg 
-                  class="w-6 h-6 mt-6" fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-              </i> -->
-              <!-- THUMBNAIL IMAGES-->
-       <!-- <div class=""" >      -->
-
-        <div id="primary-slider" class=" splide w-64 h-52 ">
-          <div class="splide__track ">
-            <ul class="splide__list ">
               <li class="splide__slide w-64 h-52">
-
-                <img class="w-64 h-48 "src="chair-profile.png">
-
+                <img class="w-64 h-44 "src="chair-profile.png">
               </li>
+
               <li class="splide__slide w-64 h-52">
-
-              <img src="modern-chair2.png">
-
+                <img class="w-64 h-44" src="modern-chair2.png">
               </li>
+
               <li class="splide__slide w-64 h-52">
-
-                <img src="modern-chair3.png">
-
+                <img class="w-64 h-44" src="modern-chair3.png">
               </li>
+  
             </ul>
           </div>
         </div>
 
-          <div id="secondary-slider" class="splide w-64  mt-12">
-            <div class="splide__track ">
-              <ul class="splide__list">
-                <li class="splide__slide w-64 ">
-
-                  <img class="" src="chair-profile.png">
-
+        <!-- secondary slider -->
+          <div id="secondary-slider" class="splide ">  
+             <div class="splide__track w-52 "> 
+              <ul class="splide__list ">
+              
+                <li class="splide__slide bg-gray-100 rounded-md">
+                  <img src="chair-profile.png">
                 </li>
-                <li class="splide__slide " >
 
-                <img class="" src="modern-chair2.png">
-
+                <li class="splide__slide bg-gray-100 rounded-md" >
+                  <img src="modern-chair2.png">
                 </li>
-                <li class="splide__slide">
 
-                  <img class="" src="modern-chair3.png">
-
+                <li class="splide__slide bg-gray-100 rounded-md">
+                  <img src="modern-chair3.png">
                 </li>
+    
               </ul>
-            </div>
-          
-
-          
-        </div>
+              </div>
+            </div> 
       </div>
-    <!-- </div>   -->
-
-
-              <!-- <img  
-                   
-                  class=" w-14 h-9 mr-2  " src="chair-profile.png">
-          </div>
-          <div class="w-16 h-16 bg-gray-100 mr-4 rounded-lg flex items-center">
-              <img  
-                 
-                  class="w-14 h-9 mr-2 " src="modern-chair2.png">
-          </div>
-          <div class="w-16 h-16 bg-gray-100  rounded-lg flex items-center">
-              <img 
-                  @click="current = 2, isOpen = true" 
-                  class="  w-14 h-9 mr-2 " src="modern-chair3.png">
-          </div>
-  
-              <i>
-                <svg 
-                  class="w-6 h-6 mt-6 " fill="none" stroke="rgba(170, 170, 170, 1)" viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-             </i>
-            </div>
-          </div> -->
+   
 
       
-<!-- 2ND COLS-->
+<!-- 2ND COLS of modern chair description -->
           <div class=" pl-5 h-72 col-span-2 mt-28">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Modern Chair</h3>
             <div class="flex">
@@ -1671,10 +1617,6 @@
 
       </section>
 
-
-
-
-
     </main>
   </div>
 
@@ -1684,7 +1626,6 @@
     <div class="w-full h-36  ">
       <div class="mx-64 py-12 text-gray-400 text-xl font-bold">Copyright 2021, Furniture Co</div>
   </footer>
-
 
 
 </body>

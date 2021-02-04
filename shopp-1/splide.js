@@ -3,11 +3,13 @@
 document.addEventListener( 'DOMContentLoaded', function () {
 
 	var secondarySlider = new Splide( '#secondary-slider', {
-		fixedWidth  : 100,
-		height      : 60,
+		fixedWidth  : 80,
+		height      : 80,
 		gap         : 10,
-		cover       : true,
+		cover       : false,
 		isNavigation: true,
+        rewind      : true,
+        pagination  : false,
 		focus       : 'center',
 		breakpoints : {
 			'600': {
@@ -23,7 +25,11 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		pagination : false,
 		arrows     : false,
 		cover      : false,
+        
 	} ); // do not call mount() here.
 	
 	primarySlider.sync( secondarySlider ).mount();
 } );
+
+
+
