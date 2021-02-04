@@ -4,10 +4,12 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 	var secondarySlider = new Splide( '#secondary-slider', {
 		fixedWidth  : 80,
-		height      : 80,
+		fixedHeight : 80,
+		width       : 290,
 		gap         : 10,
 		cover       : false,
 		isNavigation: true,
+		autoWidth   : false,
         rewind      : true,
         pagination  : false,
 		focus       : 'center',
@@ -19,6 +21,10 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		},
 	} ).mount();
 	
+
+
+
+
 	var primarySlider = new Splide( '#primary-slider', {
 		type       : 'fade',
 		heightRatio: 0.5,
@@ -30,6 +36,5 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	
 	primarySlider.sync( secondarySlider ).mount();
 } );
-
 
 
