@@ -54,7 +54,7 @@ h3 {
      width: 930px;
  }
 
-.bed-description {
+.container-description {
     width: 528px;
     height: 114px;
 }
@@ -75,6 +75,4 @@ h3 {
 
 }
 
-/* #secondary-slider-track .table-slider-secondary.is-active {
-    border: 2px solid #106C9F ;
-} */
+
