@@ -39,9 +39,15 @@ h3 {
  .card-cover {
      background: linear-gradient(180deg, rgba(16, 108, 159, 0.84) 0%, rgba(57, 161, 219, 0.87) 100%);
      width:264px;
-     height: 395px;
+     height: 375px;
  
  } 
+
+ .card-cover-mobile {
+    background: linear-gradient(180deg, rgba(16, 108, 159, 0.84) 0%, rgba(57, 161, 219, 0.87) 100%);
+    width:310px;
+    height: 375px;
+ }
  
  .close-button {
      color: rgba(16, 108, 159, 1);
@@ -49,15 +55,21 @@ h3 {
      border: 1px solid #106C9F;
  }
 
- .product-container {
+ /* .product-container {
      height: 661px;
      width: 930px;
- }
+ }  */
+
+ /* .mobile-description {
+     height: 850px;
+     width: 400px;
+ } */
 
 .container-description {
     width: 528px;
     height: 114px;
 }
+
 
 .size-button{
     border: 1px solid #106C9F;
