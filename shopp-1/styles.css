@@ -39,7 +39,7 @@ h3 {
  .card-cover {
      background: linear-gradient(180deg, rgba(16, 108, 159, 0.84) 0%, rgba(57, 161, 219, 0.87) 100%);
      width:264px;
-     height: 375px;
+     height: 395px;
  
  } 
 
@@ -55,10 +55,10 @@ h3 {
      border: 1px solid #106C9F;
  }
 
- /* .product-container {
+ .product-container {
      height: 661px;
      width: 930px;
- }  */
+ } 
 
  /* .mobile-description {
      height: 850px;
