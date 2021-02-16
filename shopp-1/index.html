@@ -22,12 +22,12 @@
 
 
   <header role="banner">
-    <div class="gradient sm:h-24 h-36 md:h-60 w-full">
+    <div class="gradient sm:h-36 md:h-60 w-full">
       <div class="flex items-center">
         <div>
           <img class="w-20 h-20 mt-4 ml-4 lg:w-32 lg:h-32 lg:mb-12 lg:ml-24 lg:mt-14 lg:mr-9" src="Logo.jpg.png" alt="logo">
         </div>
-        <div class=" ml-4 pb-8 text-2xl md:text-5xl text-gray-200 font-bold pt-12" aria-title="Simplistic Contemporary Furniture">Simplistic Contemporary Furniture</div>
+        <div class=" ml-4 pb-8 text-2xl md:mt-6 md:text-5xl text-gray-200 font-bold pt-12" aria-title="Simplistic Contemporary Furniture">Simplistic Contemporary Furniture</div>
       </div>
     </div>
   </header>
@@ -61,13 +61,13 @@
               </div>
                   
               <img class="w-44 h-40 mx-auto mx-10 mt-11 " src="chair-profile.png" alt="modern chair">
-              <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7">Modern Chair</h3>
+              <h3 class="ml-6 mr-14 mt-7 font-bold text-xl text-base leading-7"> Gold Chair</h3>
               <p class="text-sm font-normal text-gray-400 w-32 ml-6 mr-28">All Sizes Available</p>
               <div class="flex justify-between ">
                 <h3 class="font-bold ml-6 mt-4 text-3xl ">$250 </h3>
                 <button>
                 <a href="#chair-description" 
-                class="blue-button rounded-2xl w-28 h-8 flex my-4 mr-5 items-center shadow-md" role="button" aria-label="view details">
+                class="blue-button rounded-2xl  w-28 h-8 flex my-4  mr-5 items-center shadow-md" role="button" aria-label="view details">
                   <div class="w-4 h-4 ml-2 my-auto rounded-full bg-white opacity-50  ">
                     <svg class="w-3 h-3 mx-auto my-auto mt-0.5  " xmlns="http://www.w3.org/2000/svg" fill="none"
                       viewBox="0 0 24 24" stroke="rgba(72, 189, 239, 1)" >
@@ -156,8 +156,9 @@
             </div>
           </article>
 
-     <!-- chair description -->
-    <article  
+<!-- gold chair description -->
+
+          <article  
             id="chair-description"
             x-show="isActive === 'product1' "
             class="col-span-1  lg:col-span-3   mt-8 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200" aria-label="product modern chair">
@@ -346,7 +347,7 @@
           </div>
       </div>
 
-          <div class="mt-12 ml-5  ">
+          <div class="mr-16 mt-16 h-72 ml-12  ">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Sleek Bed</h3>
             <div class="flex">
               <h3 class="text-2xl sm:text-3xl mt-0.5 leading-10">$1,000</h3>
@@ -365,7 +366,7 @@
                 </div>
             </div>
               </button>
-            <p class=" text-xs sm:text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="details for product">Lorem ipsum dolor sit
+            <p class=" flex-wrap text-xs  font-normal text-gray-400 mb-5  leading-5" aria-details="details for product">Lorem ipsum dolor sit
               amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -376,7 +377,7 @@
             <div>
             
               <button 
-                        class="size-button w-24 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button"  aria-label="size small"
+                        class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button"  aria-label="size small"
                         :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                 <h5 
                       @click.prevent="activeVariant = 'variant0'"
@@ -384,7 +385,7 @@
               </button>
 
               <button 
-                    class="size-button w-24 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="size medium" 
+                    class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="size medium" 
                     :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                 <h5 
                 @click.prevent="activeVariant = 'variant1'"
@@ -393,7 +394,7 @@
 
 
               <button
-                  class="size-button w-24 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button"  aria-label="size large"
+                  class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button"  aria-label="size large"
                   :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
 
                 <h5 
@@ -485,7 +486,7 @@
       </div>
    
 
-          <div class="mt-12 mx-12 ml-5">
+          <div class="mr-16 mt-16 h-72 ml-12 ">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Rustic Table</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$450</h3>
@@ -503,7 +504,7 @@
                   <p class="font-bold mx-1 text-sm whitespace-nowrap" >Add to Cart</p>
                 </div>
             </div>
-            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="product description">Lorem ipsum dolor sit
+            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
               amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -513,7 +514,7 @@
               <div>
             
                 <button 
-                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button"  aria-label="size small"
+                          class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button"  aria-label="size small"
                           :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                   <h5 
                         @click.prevent="activeVariant = 'variant0'"
@@ -521,7 +522,7 @@
                 </button>
   
                 <button 
-                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5"  role="button" aria-label="size medium"
+                      class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5"  role="button" aria-label="size medium"
                       :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                   <h5 
                   @click.prevent="activeVariant = 'variant1'"
@@ -530,7 +531,7 @@
   
   
                 <button
-                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="size large"
+                    class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="size large"
                     :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
   
                   <h5 
@@ -542,7 +543,7 @@
             </div>
 
               <!-- CUSTOMER REVIEWS -->
-            <div class=" ml-12  h-60 mt-8">
+            <div class=" ml-12  h-60 mt-12">
               <h3 class="sm:text-xl font-bold flex items-center" >Rating
                 <svg class="w-5 h-5 ml-2 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                 <svg class="w-5 h-5  flex" alt="star rating"  fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -726,7 +727,7 @@
           </div>
 
     
-          <div class="mr-16 mt-12 ml-5">
+          <div class="mr-16 mt-16 h-72 ml-12 ">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Accent Lamp</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$75</h3>
@@ -745,7 +746,7 @@
                 </div>
                 </button>
             </div>
-            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="product description">Lorem ipsum dolor sit
+            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
               amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -755,7 +756,7 @@
               <div>
             
                 <button 
-                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
+                          class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
                           :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                   <h5 
                         @click.prevent="activeVariant = 'variant0'"
@@ -763,7 +764,7 @@
                 </button>
   
                 <button 
-                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
+                      class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
                       :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                   <h5 
                   @click.prevent="activeVariant = 'variant1'"
@@ -772,7 +773,7 @@
   
   
                 <button
-                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
+                    class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
                     :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
   
                   <h5 
@@ -784,7 +785,7 @@
               </div>
 
               <!-- CUSTOMER REVIEWS -->
-            <div class=" ml-12 h-60 mt-8">
+            <div class=" ml-12 h-60 mt-12">
               <h3 class="text-xl font-bold flex items-center" >Rating
                 <svg class="w-5 h-5 ml-2 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                 <svg class="w-5 h-5  flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -863,7 +864,7 @@
           </div>
 
     
-          <div class="pl-5  mt-16 ml-5">
+          <div class="mr-16 mt-16 h-72 ml-12 ">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Bar Stool</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$150 </h3>      
@@ -881,7 +882,7 @@
                   <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
                 </div>
             </div>
-            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="product description">Lorem ipsum dolor sit
+            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
               amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -891,7 +892,7 @@
               <div>
             
                 <button 
-                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
+                          class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
                           :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                   <h5 
                         @click.prevent="activeVariant = 'variant0'"
@@ -899,7 +900,7 @@
                 </button>
   
                 <button 
-                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
+                      class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
                       :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                   <h5 
                   @click.prevent="activeVariant = 'variant1'"
@@ -908,7 +909,7 @@
   
   
                 <button
-                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
+                    class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
                     :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
   
                   <h5 
@@ -919,7 +920,7 @@
               </div>
               </div>
  <!-- CUSTOMER REVIEWS -->
-    <div class=" ml-12  h-60 mt-8">
+    <div class=" ml-12  h-60 mt-12">
       <h3 class="text-xl font-bold flex items-center" >Rating
         <svg class="w-5 h-5 ml-2 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
         <svg class="w-5 h-5  flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -996,7 +997,7 @@
           </div>
 
     
-          <div class="pl-5  mt-16 ml-5">
+          <div class="mr-16 mt-16 h-72 ml-12 ">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Velvet Sofa</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$550</h3>
@@ -1014,7 +1015,7 @@
                   <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
                 </div>
             </div>
-            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="product description">Lorem ipsum dolor sit
+            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
               amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -1024,7 +1025,7 @@
               <div>
             
                 <button 
-                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
+                          class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
                           :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                   <h5 
                         @click.prevent="activeVariant = 'variant0'"
@@ -1032,7 +1033,7 @@
                 </button>
   
                 <button 
-                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
+                      class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
                       :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                   <h5 
                   @click.prevent="activeVariant = 'variant1'"
@@ -1041,7 +1042,7 @@
   
   
                 <button
-                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
+                    class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
                     :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
   
                   <h5 
@@ -1051,7 +1052,7 @@
                 </div>
               </div>
             </div> 
-              <div class=" ml-12  h-60 mt-8">
+              <div class=" ml-12 h-60 mt-12">
                 <h3 class="text-xl font-bold flex items-center" >Rating
                   <svg class="w-5 h-5 ml-2 flex" alt="Star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                   <svg class="w-5 h-5  flex" alt="Star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -1234,7 +1235,7 @@
           </div>
 
     
-          <div class="pl-5  mt-16 ml-5">
+          <div class="mr-16 mt-16 h-72 ml-12 ">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Gold Accent Desk</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$250</h3>  
@@ -1252,7 +1253,7 @@
                   <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
                 </div>
             </div>
-            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="product description">Lorem ipsum dolor sit
+            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
               amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -1262,7 +1263,7 @@
               <div>
             
                 <button 
-                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
+                          class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
                           :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                   <h5 
                         @click.prevent="activeVariant = 'variant0'"
@@ -1270,7 +1271,7 @@
                 </button>
   
                 <button 
-                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
+                      class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
                       :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                   <h5 
                   @click.prevent="activeVariant = 'variant1'"
@@ -1279,7 +1280,7 @@
   
   
                 <button
-                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
+                    class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
                     :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
   
                   <h5 
@@ -1290,7 +1291,7 @@
               </div>
           </div>
 
-              <div class=" ml-12 h-60 mt-8">
+              <div class=" ml-12 h-60 mt-12">
                 <h3 class="text-xl font-bold flex items-center" >Rating
                   <svg class="w-5 h-5 ml-2 flex" alt="Star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                   <svg class="w-5 h-5  flex"  alt="Star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -1367,7 +1368,7 @@
           </div>
 
     
-          <div class="pl-5 mt-16 ml-5">
+          <div class="mr-16 mt-16 h-72 ml-12 ">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Glass Side Table</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$300</h3>
@@ -1385,7 +1386,7 @@
                   <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
                 </div>
             </div>
-            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="product description">Lorem ipsum dolor sit
+            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
               amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -1395,7 +1396,7 @@
               <div>
             
                 <button 
-                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
+                          class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
                           :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                   <h5 
                         @click.prevent="activeVariant = 'variant0'"
@@ -1403,7 +1404,7 @@
                 </button>
   
                 <button 
-                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
+                      class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
                       :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                   <h5 
                   @click.prevent="activeVariant = 'variant1'"
@@ -1412,7 +1413,7 @@
   
   
                 <button
-                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
+                    class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
                     :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
   
                   <h5 
@@ -1423,7 +1424,7 @@
               </div>
           </div>
 
-              <div class=" ml-12 h-60 mt-8">
+              <div class=" ml-12 h-60 mt-12">
                 <h3 class="text-xl font-bold flex items-center" >Rating
                   <svg class="w-5 h-5 ml-2 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                   <svg class="w-5 h-5  flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -1501,7 +1502,7 @@
           </div>
 
     
-          <div class="pl-5 mt-16 ml-5">
+          <div class="mr-16 mt-16 h-72 ml-12 ">
           <h3 class="font-bold text-xl text-base leading-7 mt-14">Ceiling Light</h3>
           <div class="flex">
             <h3 class="text-3xl mt-0.5 leading-10">$130</h3>
@@ -1519,7 +1520,7 @@
                 <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
               </div>
           </div>
-          <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="product description">Lorem ipsum dolor sit
+          <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
             amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
             enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -1529,7 +1530,7 @@
             <div>
             
               <button 
-                        class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
+                        class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
                         :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                 <h5 
                       @click.prevent="activeVariant = 'variant0'"
@@ -1537,7 +1538,7 @@
               </button>
 
               <button 
-                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
+                    class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
                     :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                 <h5 
                 @click.prevent="activeVariant = 'variant1'"
@@ -1546,7 +1547,7 @@
 
 
               <button
-                  class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
+                  class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
                   :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
 
                 <h5 
@@ -1556,7 +1557,7 @@
               </div>
             </div>
         </div>
-            <div class=" ml-12 h-60 mt-8">
+            <div class=" ml-12 h-60 mt-12">
               <h3 class="text-xl font-bold flex items-center" >Rating
                 <svg class="w-5 h-5 ml-2 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                 <svg class="w-5 h-5  flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -1686,6 +1687,7 @@
             </div>
           </button>
         </div>
+
     </article>
 
 
@@ -1742,7 +1744,7 @@
           </div>
 
     
-          <div class="pl-5  mt-16 ml-5">
+          <div class="mr-16 mt-16 h-72 ml-12 ">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Trendy Rug</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$250</h3> 
@@ -1760,7 +1762,7 @@
                   <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
                 </div>
             </div>
-            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="product description">Lorem ipsum dolor sit
+            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
               amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -1770,7 +1772,7 @@
               <div>
             
                 <button 
-                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
+                          class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
                           :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                   <h5 
                         @click.prevent="activeVariant = 'variant0'"
@@ -1778,7 +1780,7 @@
                 </button>
   
                 <button 
-                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
+                      class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
                       :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                   <h5 
                   @click.prevent="activeVariant = 'variant1'"
@@ -1787,7 +1789,7 @@
   
   
                 <button
-                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
+                    class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
                     :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
   
                   <h5 
@@ -1798,7 +1800,7 @@
               </div>
           </div>
 
-              <div class=" ml-12 h-60 mt-8">
+              <div class=" ml-12 h-60 mt-12">
                 <h3 class="text-xl font-bold flex items-center" >Rating
                   <svg class="w-5 h-5 ml-2 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                   <svg class="w-5 h-5 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -1875,7 +1877,7 @@
           </div>
 
     
-          <div class="pl-5 mt-16 ml-5">
+          <div class="mr-16 mt-16 h-72 ml-12 ">
             <h3 class="font-bold text-xl text-base leading-7 mt-14">Chandelier</h3>
             <div class="flex">
               <h3 class="text-3xl mt-0.5 leading-10">$360</h3>
@@ -1893,7 +1895,7 @@
                   <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
                 </div>
             </div>
-            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="product description">Lorem ipsum dolor sit
+            <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
               amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -1903,7 +1905,7 @@
               <div>
             
                 <button 
-                          class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-details="product size small"
+                          class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-details="product size small"
                           :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                   <h5 
                         @click.prevent="activeVariant = 'variant0'"
@@ -1911,7 +1913,7 @@
                 </button>
   
                 <button 
-                      class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-details="product size medium"
+                      class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-details="product size medium"
                       :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                   <h5 
                   @click.prevent="activeVariant = 'variant1'"
@@ -1920,7 +1922,7 @@
   
   
                 <button
-                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-details="product size large"
+                    class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-details="product size large"
                     :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
   
                   <h5 
@@ -1931,7 +1933,7 @@
               </div>
             </div>
 
-              <div class=" ml-12 h-60 mt-8">
+              <div class=" ml-12 h-60 mt-12">
                 <h3 class="text-xl font-bold flex items-center" >Rating
                   <svg class="w-5 h-5 ml-2 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                   <svg class="w-5 h-5 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -2009,7 +2011,7 @@
           </div>
 
     
-          <div class="pl-5 mt-16 ml-5">
+          <div class="mr-16 mt-16 h-72 ml-12 ">
           <h3 class="font-bold text-xl text-base leading-7 mt-14">Gold Metal Clock</h3>
           <div class="flex">
             <h3 class="text-3xl mt-0.5 leading-10">$220</h3>
@@ -2027,7 +2029,7 @@
                 <p class="font-bold mx-1 text-sm whitespace-nowrap ">Add to Cart</p>
               </div>
           </div>
-          <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 mr-20 leading-5" aria-details="product description">Lorem ipsum dolor sit
+          <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
             amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
             enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -2037,7 +2039,7 @@
             <div>
             
               <button 
-                        class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
+                        class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size small"
                         :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
                 <h5 
                       @click.prevent="activeVariant = 'variant0'"
@@ -2045,7 +2047,7 @@
               </button>
 
               <button 
-                    class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
+                    class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
                     :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
                 <h5 
                 @click.prevent="activeVariant = 'variant1'"
@@ -2054,7 +2056,7 @@
 
 
               <button
-                  class="size-button w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
+                  class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
                   :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
 
                 <h5 
@@ -2065,7 +2067,7 @@
             </div>
         </div>
 
-            <div class=" ml-12  h-60 mt-8">
+            <div class=" ml-12 h-60 mt-12">
               <h3 class="text-xl font-bold flex items-center" >Rating
                 <svg class="w-5 h-5 ml-2 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                 <svg class="w-5 h-5  flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
