@@ -4,15 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopp 1</title>
+  <title>Shopp 2</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">       
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" href="splide.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-  <script src="splide.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>  
 </head>
 
@@ -23,7 +19,7 @@
         </h1>
     </header>
 
-    <main class="main-color pb-24" role="main">
+    <main class="main-color pb-24" role="main" x-data = "{activeButton : 'button'}">
        
 
           <div class="pl-12 pr-12 md:flex pt-10 mb-12 pb-12 bg-gray-100">
@@ -85,7 +81,7 @@
               </div>
 
               <p class="text-sm mt-6 mb-6 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <button class="w-20 h-8 rounded-2xl bg-gray-100 mr-2" role="button" aria-details="size">king</button>
+              <button class="w-20 h-8 rounded-2xl bg-gray-100 mr-2" role="button" aria-details="size">king </button>
               <button class="w-20 h-8 rounded-2xl bg-blue-500 text-white mr-2" role="button" aria-details="size" >Queen</button>
               <button class="w-20 h-8 rounded-2xl bg-gray-100" role="button" aria-details="size">Double </button>
                 
