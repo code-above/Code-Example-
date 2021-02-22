@@ -12,10 +12,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">       
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>  
+        <link  href="splide-core.min.css">
+        <link  href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+        
+        <script src="splide.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     </head>
     <body>
-        <script src="" async defer></script>
+        
 
         <header class="flex bg-gray-100" role="banner">
             <h1 class="pl-12 ">
@@ -24,15 +28,240 @@
         </header>
 
         <main>
-            
+
+            <div class="grid grid-cols-4 pl-12 pr-12 gap-x-4">
+
+<!-- row 1-->
+
+<div class="col-span-4 ">
+    <div class="flex">            
+        <div class="max-w-lg ">
+            <div class="md:flex mt-12 justify-between md:pt-2 ">
+                <h2 class="pt-2 md:pt-0 text-xl leading-6 font-bold">Product Name </h2>
+                    <div class="flex ">
+                        <img class="w-5 h-5 "src="Vector.png" alt="one star rating">
+                        <img class="w-5 h-5 "src="Vector.png" alt="one star rating">
+                        <img class="w-5 h-5" src="Vector.png" alt="one star rating"> 
+                        <img class="w-5 h-5" src="Vector.png" alt="one star rating">
+                        <img class="w-5 h-5" src="Vector no fill.png" alt="-1 star rating">
+                            <p>4.0</p>
+                    </div>
+                    
+            </div>
+
+            <p class=" mt-4 font-normal text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="w-24 h-8 mt-6 mr-4 bg-gray-100 mb-4" role="button" aria-label="size">king </button>
+            <button class="w-24 h-8 bg-purple-800 text-white mr-4" role="button" aria-label="size" >Queen</button>
+            <button class="w-24 h-8 bg-gray-100 mr-4" role="button" aria-label="size">Double </button>
+
+            <div class="mt-4 bg-gray-100 mr-4 rounded-md">
+                <div class="flex items-center">
+                  <img class="ml-2 mt-2 mb-4"src="Ellipse 1.png" alt="customer profile review">
+                  <p class="text-sm ml-2 mt-4 pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit <br>
+                     <span class="text-sm text-gray-500 flex ">Anna Pete
+                       <img class="ml-2 h-4" src="vector.png" alt="one star rating">
+                       <img class="ml-2 h-4" src="vector.png" alt="one star rating">
+                       <img class="ml-2 h-4" src="vector.png" alt="one star rating">
+                       <img class="ml-2 h-4" src="vector.png" alt="one star rating">
+                       <img class="ml-2 h-4" src="Vector no fill.png" alt="-1 star rating">
+                     </span>
+                   </p>
+                </div> 
+              </div>
+
+              <div class="flex justify-between items-center mt-16 mb-8 ">
+                <p class="font-bold my-4 text-2xl">180.00</p>
+                <button class="bg-purple-800 text-white w-28 h-9 mr-4 " role="button" aria-label="view">View</button>
+              </div>
+
+              <h2 class="text-2xl font-bold mb-3">Summer Furniture Sale</h2>
+                <p class="text-sm leading-5 max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+
+
+<!--right side-->
+<div class="flex w-1/2 h-52 ">
+               
+<!-- add splide.js -->
+                <!-- primary slider-->
+           <div class="bg-red-300 max-w-md">
+                <div id="primary-slider " class="splide  ">
+                    <div class="splide__track ">
+                        <ul class="splide__list ">
+                            <li class="splide__slide ">
+                                <img class=""src="image 15.png">
+                            </li>
+                            <li class="splide__slide ">
+                                <img src="image 9.png">
+                            </li>
+                            <li class="splide__slide ">
+                                <img src="image 9.png">
+                            </li>
+                            <li class="splide__slide ">
+                                <img src="image 9.png">
+                            </li>
+                            <li class="splide__slide ">
+                                <img src="image 9.png">
+                            </li>
+                            <li class="splide__slide ">
+                                <img src="image 9.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- secondary slider-->
+
+                <div id="secondary-slider " class="splide  ">
+                    <div class="splide__track ">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="image 15.png">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="image 9.png">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="image 9.png">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="image 9.png">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="image 9.png">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="image 9.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+</div>
+
+
+     </div>
+    </div>
+   </div>
+
+            <!-- row -2  product 1-->
+            <div class="mt-6 ">
+                <div>
+                    <img class="w-full" src="image 10.png" alt="product">
+                    <h2 class="pt-4 text-lg font-bold">Product Name</h2>
+                    <p class="text-sm text-gray-500 font-light pb-4 ">Description goes here</p>
+                    <div class="flex justify-between pb-10">
+                        <p class="font-bold  text-lg">$180.00</p>
+                        <button class=" bg-purple-800 text-white w-20 h-8 mr-4" role="button" aria-label="view">View</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- product 2 -->
+
+            <div class="mt-6 ">
+                <div>
+                    <img class="w-full" src="image 5.png" alt="product">
+                    <h2 class="pt-4 text-lg font-bold">Product Name</h2>
+                    <p class="text-sm text-gray-500 font-light pb-4 ">Description goes here</p>
+                    <div class="flex justify-between pb-10">
+                        <p class="font-bold  text-lg">$180.00</p>
+                        <button class=" bg-purple-800 text-white w-20 h-8 mr-4" role="button" aria-label="view">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 3-->
+            <div class="mt-6 ">
+                <div>
+                    <img class="w-full" src="image 2.png" alt="product">
+                    <h2 class="pt-4 text-lg font-bold">Product Name</h2>
+                    <p class="text-sm text-gray-500 font-light pb-4 ">Description goes here</p>
+                    <div class="flex justify-between pb-10">
+                        <p class="font-bold  text-lg">$180.00</p>
+                        <button class=" bg-purple-800 text-white w-20 h-8 mr-4" role="button" aria-label="view">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 4-->
+            <div class="mt-6 ">
+                <div>
+                    <img class="w-full" src="image 5.png" alt="product">
+                    <h2 class="pt-4 text-lg font-bold">Product Name</h2>
+                    <p class="text-sm text-gray-500 font-light pb-4 ">Description goes here</p>
+                    <div class="flex justify-between pb-10">
+                        <p class="font-bold  text-lg">$180.00</p>
+                        <button class=" bg-purple-800 text-white w-20 h-8 mr-4" role="button" aria-label="view">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- row 3 product 5-->
+
+
+            <div class="mt-6 ">
+                <div>
+                    <img class="w-full" src="image 3.png" alt="product">
+                    <h2 class="pt-4 text-lg font-bold">Product Name</h2>
+                    <p class="text-sm text-gray-500 font-light pb-4 ">Description goes here</p>
+                    <div class="flex justify-between pb-10">
+                        <p class="font-bold  text-lg">$180.00</p>
+                        <button class=" bg-purple-800 text-white w-20 h-8 mr-4" role="button" aria-label="view">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 6-->
+
+            <div class="mt-6 ">
+                <div>
+                    <img class="w-full" src="Rectangle 12.png" alt="product">
+                    <h2 class="pt-4 text-lg font-bold">Product Name</h2>
+                    <p class="text-sm text-gray-500 font-light pb-4 ">Description goes here</p>
+                    <div class="flex justify-between pb-10">
+                        <p class="font-bold  text-lg">$180.00</p>
+                        <button class=" bg-purple-800 text-white w-20 h-8 mr-4" role="button" aria-label="view">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 7 -->
+
+            <div class="mt-6 ">
+                <div>
+                    <img class="w-full" src="image 6.png" alt="product">
+                    <h2 class="pt-4 text-lg font-bold">Product Name</h2>
+                    <p class="text-sm text-gray-500 font-light pb-4 ">Description goes here</p>
+                    <div class="flex justify-between pb-10">
+                        <p class="font-bold  text-lg">$180.00</p>
+                        <button class=" bg-purple-800 text-white w-20 h-8 mr-4" role="button" aria-label="view">View</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- product 8 -->
+
+            <div class="mt-6 ">
+                <div>
+                    <img class="w-full" src="image 4.png" alt="product">
+                    <h2 class="pt-4 text-lg font-bold">Product Name</h2>
+                    <p class="text-sm text-gray-500 font-light pb-4 ">Description goes here</p>
+                    <div class="flex justify-between pb-10">
+                        <p class="font-bold  text-lg">$180.00</p>
+                        <button class=" bg-purple-800 text-white w-20 h-8 mr-4" role="button" aria-label="view">View</button>
+                    </div>
+                </div>
+            </div>
 
 
 
 
 
-
-
-
+            </div>
         </main>
 
     </body>
