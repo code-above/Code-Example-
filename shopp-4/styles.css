@@ -2,3 +2,9 @@ html {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+
+#secondary-slider-track .is-active.is-visible {
+    border: 2px solid #106C9F ;
+     
+
+}
