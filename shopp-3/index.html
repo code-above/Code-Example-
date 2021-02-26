@@ -400,11 +400,10 @@
 <!-- only see on medium screens product 1-->
         <div 
         x-show="active === 'product0'"
-        @click.away="open = false"
         class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-            <div class="lg:flex justify-between">
-                <div class="flex ">
-                     <img class="border-2 border-gray-200  md:mr-4" src="image 5.png" alt="product">
+            <div class=" lg:flex justify-between">
+                <div class="flex md:mr-6">
+                     <img class="border-2 border-gray-200 md:mr-4" src="image 5.png" alt="product">
                     <div class="">
                         <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 5.png" alt="product size">
                         <img class="ml-4 md:ml-4 mb-2 w-24 h-24"  src="image 5.png" alt="product size">
@@ -413,8 +412,8 @@
                     </div>
                 </div>
 
-        <div class="max-w-2xl md:ml-12">
-                <div class="md:flex justify-between md:pt-2 ">
+        <div class="md:max-w-md ">
+                <div class="md:flex justify-between md:pt-2 md:mr-6">
                     <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
                         <div class="flex ">
                             <img class="w-5 h-5 "src="Vector.png" alt="one star rating">
@@ -468,10 +467,9 @@
     <!-- only see on medium screens product 2-->
         <div 
         x-show="active === 'product1'"
-                @click.away="open = false"
         class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
             <div class="lg:flex justify-between">
-                <div class="flex ">
+                <div class="flex md:mr-6 ">
                      <img class="border-2 border-gray-200  md:mr-4" src="image 11.png" alt="product">
                     <div class="">
                         <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 11.png" alt="product size">
@@ -481,7 +479,7 @@
                     </div>
                 </div>
 
-        <div class="max-w-2xl md:ml-12">
+        <div class="md:max-w-md">
                 <div class="md:flex justify-between md:pt-2 ">
                     <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
                         <div class="flex ">
@@ -539,7 +537,7 @@ x-show="active === 'product2'"
     @click.away="open = false"
     class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
     <div class="lg:flex justify-between">
-        <div class="flex ">
+        <div class="flex md:mr-6">
              <img class="border-2 border-gray-200  md:mr-4" src="image 6.png" alt="product">
             <div class="">
                 <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 6.png" alt="product size">
@@ -549,7 +547,7 @@ x-show="active === 'product2'"
             </div>
         </div>
 
-<div class="max-w-2xl md:ml-12">
+<div class="md:max-w-md">
         <div class="md:flex justify-between md:pt-2 ">
             <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
                 <div class="flex ">
@@ -603,10 +601,9 @@ x-show="active === 'product2'"
 <!-- only see on medium screens product 4-->
     <div 
     x-show="active === 'product3'"
-    @click.away="open = false"
     class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
     <div class="lg:flex justify-between">
-        <div class="flex ">
+        <div class="flex md:mr-6 ">
              <img class="border-2 border-gray-200  md:mr-4" src="image 4.png" alt="product">
             <div class="">
                 <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 4.png" alt="product size">
@@ -616,7 +613,7 @@ x-show="active === 'product2'"
             </div>
         </div>
 
-<div class="max-w-2xl md:ml-12">
+<div class="md:max-w-md">
         <div class="md:flex justify-between md:pt-2 ">
             <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
                 <div class="flex ">
@@ -1035,7 +1032,7 @@ x-show="active === 'product2'"
 x-show="active === 'product5'"
 class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
     <div class="lg:flex justify-between">
-        <div class="flex ">
+        <div class="flex md:mr-6">
              <img class="border-2 border-gray-200  md:mr-4" src="image 10.png" alt="product">
             <div class="">
                 <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 10.png" alt="product size">
@@ -1045,7 +1042,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
             </div>
         </div>
 
-<div class="max-w-2xl md:ml-12">
+<div class="md:max-w-md">
         <div class="md:flex justify-between md:pt-2 ">
             <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
                 <div class="flex ">
@@ -1102,7 +1099,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 x-show="active === 'product6'"
 class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
     <div class="lg:flex justify-between">
-        <div class="flex ">
+        <div class="flex md:mr-6">
              <img class="border-2 border-gray-200  md:mr-4" src="image 5.png" alt="product">
             <div class="">
                 <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 5.png" alt="product size">
@@ -1112,7 +1109,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
             </div>
         </div>
 
-<div class="max-w-2xl md:ml-12">
+<div class="md:max-w-md">
         <div class="md:flex justify-between md:pt-2 ">
             <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
                 <div class="flex ">
@@ -1169,7 +1166,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 x-show="active === 'product7'"
 class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
 <div class="lg:flex justify-between">
-<div class="flex ">
+<div class="flex md:mr-6">
      <img class="border-2 border-gray-200  md:mr-4" src="image 2.png" alt="product">
     <div class="">
         <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 2.png" alt="product size">
@@ -1179,7 +1176,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
     </div>
 </div>
 
-<div class="max-w-2xl md:ml-12">
+<div class="md:max-w-md">
 <div class="md:flex justify-between md:pt-2 ">
     <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
         <div class="flex ">
@@ -1235,7 +1232,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 x-show="active === 'product8'"
 class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
 <div class="lg:flex justify-between">
-<div class="flex ">
+<div class="flex md:mr-6">
      <img class="border-2 border-gray-200  md:mr-4" src="image 5.png" alt="product">
     <div class="">
         <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 5.png" alt="product size">
@@ -1245,7 +1242,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
     </div>
 </div>
 
-<div class="max-w-2xl md:ml-12">
+<div class="md:max-w-md">
 <div class="md:flex justify-between md:pt-2 ">
     <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
         <div class="flex ">
@@ -1666,7 +1663,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 x-show="active === 'product9'"
 class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
     <div class="lg:flex justify-between">
-        <div class="flex ">
+        <div class="flex md:mr-6 ">
              <img class="border-2 border-gray-200  md:mr-4" src="image 11.png" alt="product">
             <div class="">
                 <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 11.png" alt="product size">
@@ -1676,7 +1673,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
             </div>
         </div>
 
-<div class="max-w-2xl md:ml-12">
+<div class="md:max-w-md">
         <div class="md:flex justify-between md:pt-2 ">
             <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
                 <div class="flex ">
@@ -1733,17 +1730,17 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 x-show="active === 'product10'"
 class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
     <div class="lg:flex justify-between">
-        <div class="flex ">
-             <img class="border-2 border-gray-200  md:mr-4" src="image 5.png" alt="product">
+        <div class="flex md:mr-6">
+             <img class="border-2 border-gray-200  md:mr-4" src="image 3.png" alt="product">
             <div class="">
-                <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 5.png" alt="product size">
-                <img class="ml-4 md:ml-4 mb-2 w-24 h-24"  src="image 5.png" alt="product size">
-                <img class="ml-4 md:ml-4 mb-2 w-24 h-24" src="image 5.png" alt="product size">
-                <img class="ml-4 md:ml-4 mb-2 w-24 h-24" src="image 5.png" alt="product size">
+                <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 3.png" alt="product size">
+                <img class="ml-4 md:ml-4 mb-2 w-24 h-24"  src="image 3.png" alt="product size">
+                <img class="ml-4 md:ml-4 mb-2 w-24 h-24" src="image 3.png" alt="product size">
+                <img class="ml-4 md:ml-4 mb-2 w-24 h-24" src="image 3.png" alt="product size">
             </div>
         </div>
 
-<div class="max-w-2xl md:ml-12">
+<div class="md:max-w-md">
         <div class="md:flex justify-between md:pt-2 ">
             <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
                 <div class="flex ">
@@ -1800,7 +1797,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 x-show="active === 'product11'"
 class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
 <div class="lg:flex justify-between">
-<div class="flex ">
+<div class="flex md:mr-6 ">
      <img class="border-2 border-gray-200  md:mr-4" src="Rectangle 12.png" alt="product">
     <div class="">
         <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="Rectangle 12.png" alt="product size">
@@ -1810,7 +1807,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
     </div>
 </div>
 
-<div class="max-w-2xl md:ml-12">
+<div class="md:max-w-md">
 <div class="md:flex justify-between md:pt-2 ">
     <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
         <div class="flex ">
@@ -1866,7 +1863,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 x-show="active === 'product12'"
 class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
 <div class="lg:flex justify-between">
-<div class="flex ">
+<div class="flex md:mr-6">
      <img class="border-2 border-gray-200  md:mr-4" src="image 7.png" alt="product">
     <div class="">
         <img class="ml-4 md:ml-4 mb-2 w-24 h-24 " src="image 7.png" alt="product size">
@@ -1876,7 +1873,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
     </div>
 </div>
 
-<div class="max-w-2xl md:ml-12">
+<div class="md:max-w-md">
 <div class="md:flex justify-between md:pt-2 ">
     <h2 class="pt-2 md:pt-0 text-lg leading-6 font-bold">Product Name </h2>
         <div class="flex ">
