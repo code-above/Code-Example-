@@ -1,22 +1,10 @@
 
 document.addEventListener( 'DOMContentLoaded', function () {
-    
-          
-document.querySelectorAll('.primary-01').forEach(carousel => new Splide( carousel, {
-        type       : 'fade',
-		heightRatio: 0.5,
-		pagination : false,
-		cover      : true,
-        rewind     : true, 
-        fixedHeight: 600,
-        width:     750,
-        arrows:     false,
-       
-        
-    
-}).mount());
+ 
+	
 
-document.querySelectorAll('.secondary-01').forEach(carousel => new Splide( carousel, {
+// document.querySelectorAll('.secondary').forEach(carousel => new Splide( carousel, {
+	var thumbnailsSplide = new Splide('#splide-thumbnails' , {
   fixedWidth  : 100,
 		fixedHeight : 100,
 		width       : 750,
@@ -34,9 +22,27 @@ document.querySelectorAll('.secondary-01').forEach(carousel => new Splide( carou
 				height    : 40,
 			}
 		},
-}).mount());
+
+}).mount();
+
+// document.querySelectorAll('.primary').forEach(carousel => new Splide( carousel, {
+	var primarySplide = new Splide ('#splide-primary', {
+        type       : 'fade',
+		heightRatio: 0.5,
+		pagination : false,
+		cover      : true,
+        rewind     : true, 
+        fixedHeight: 600,
+        width:     750,
+        arrows:     false,
+    
 
 
+});
+
+primarySplide.sync( thumbnailsSplide ).mount();
+
+// .mount());
 
 
 } );

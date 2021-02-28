@@ -3,8 +3,9 @@ html {
 }
 
 
-#secondary-slider-track .is-active.is-visible {
-    border: 2px solid #106C9F ;
+.secondary .is-visible.is-active {
+    border: 2px solid  #55288F !important ;
      
 
 }
+

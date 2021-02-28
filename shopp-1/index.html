@@ -36,7 +36,7 @@
     <main class=" mx-6 sm:mx-36 pb-24" role="main">
 
       <!-- top text -->
-    <section class="" x-data="{ isActive: ' product1 ', isOpen: false , activeVariant: ' variant0 ' } ">
+    <section class="" x-data="{ isActive: ' product1 ', mobile: ' mobile1 ' , activeVariant: ' variant0 ' } ">
 
         <div class="font-normal lg:mt-12">
           <h1 class="text-3xl font-bold md:font-bold md:text-4xl pb-4 ">Summer Furniture Sale</h1>
@@ -49,7 +49,7 @@
         
 
         <!-- products chair ==============================(card 1)-->
-          <article class="mt-8 mr-12 rounded-2xl bg-white shadow-md relative z-0" aria-label="product modern chair" >
+          <article class="relative z-10 md:static col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md md:relative md:z-0" aria-label="product modern chair" >
                     <div
                         :class="{ ' card-cover rounded-2xl absolute z-10 w-full h-full flex'  : isActive === 'product1'} ">
                     <button  @click="isActive = null"
@@ -75,7 +75,7 @@
                     </svg>
                   </div>
                   <div>
-                    <p @click.prevent="isActive = 'product1' " 
+                    <p @click.prevent="isActive = 'product1' , mobile = 'mobile1'" 
                       class="font-bold mx-1 text-xs whitespace-nowrap ">
                       View Details</p>
                   </div>
@@ -83,12 +83,154 @@
               </div>
             </a>
             </button>
+          <!-- only see on small screens -->  
+            <article  
+            x-show="mobile === 'mobile1'"
+            class=" lg:hidden absolute z-100 top-52 -inset-x-0 z-10  mt-8 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200" aria-label="product modern chair">
+      <div class="md:flex md:flex md:justify-between">    
+      
+        <div class="w-96  mt-16 ml-8 h-60  ">
+      <!-- primary slider -->
+        <div id="primary-slider" class=" primary-01 splide ml-8 ">
+        <div class="splide__track ">
+        <ul class="splide__list  ">
+      
+        <li class="splide__slide  w-52 h-52">
+          <img class=" "src="chair-profile.png" alt="modern chair size small">
+        </li>
+      
+        <li class="splide__slide  w-52 h-52">
+          <img class="" src="modern-chair2.png" alt="modern chair size medium">
+        </li>
+      
+        <li class="splide__slide  w-52 h-52">
+          <img class="" src="modern-chair3.png" alt="modern chair size large">
+        </li>
+      
+      </ul>
+      </div>
+      </div>
+      
+      <!-- secondary slider -->
+      
+      
+      <div id="secondary-slider" class="secondary-01 splide ">  
+      <div class="splide__track ml-12 mr-24 mt-6 "> 
+      <ul class="splide__list ">
+      
+      <li class="splide__slide bg-gray-100 rounded-md ">
+        <img class="" src="chair-profile.png" alt="modern chair size small">
+      </li>
+      
+      <li class="splide__slide bg-gray-100 rounded-md" >
+        <img src="modern-chair2.png" alt="modern chair size medium">
+      </li>
+      
+      <li class="splide__slide bg-gray-100 rounded-md">
+        <img src="modern-chair3.png" alt="modern chair size large">
+      </li>
+      
+      </ul>
+      </div> 
+      </div>
+      </div>
+      
+      
+      
+      <!-- 2ND COLS of modern chair description -->
+      <div class="mr-16 mt-12 h-72 ml-12  ">
+      <h3 class="text-md sm:font-bold text-xl text-base leading-7 mt-14">Modern Chair</h3>
+      <div class="flex">
+      <h3 class="text-3xl mt-0.5 leading-10">$250</h3>
+      <button class="blue-button rounded-2xl w-32 h-8 flex ml-4 items-center shadow-md" role="button" aria-label="add to cart">
+      <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+        <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+        </svg>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div>
+        <p class="flex flex-wrap text-xs font-bold mx-1 sm:text-sm whitespace-nowrap ">Add to Cart</p>
+      </div>
+      </div>
+      <p class="flex-wrap text-xs font-normal text-gray-400 mb-5 leading-5 " aria-details="modern chair description">Lorem ipsum dolor sit
+      amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+      enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+      laborum.</p>
+      
+      <!-- size buttons-->
+      <div class="">
+      
+      <button 
+              class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5 " role="button" aria-label="product size small"
+              :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+      <h5 
+            @click.prevent="activeVariant = 'variant0'"
+            class="text-sm font-normal leading-5 ">SMALL</h5>
+      </button>
+      
+      <button 
+          class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size medium"
+          :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+      <h5 
+      @click.prevent="activeVariant = 'variant1'"
+      class="text-sm font-normal leading-5">MEDIUM</h5> 
+      </button>
+      
+      
+      <button
+        class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="product size large"
+        :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+      
+      <h5 
+          @click.prevent="activeVariant = 'variant2'"
+          class="text-sm font-normal leading-5">LARGE</h5>
+      </button>
+      </div>
+      </div>
+      </div>
+      
+      <!-- CUSTOMER REVIEWS -->
+      <div class=" ml-12 h-60 mt-12 ">
+      <h3 class="md:text-xl font-bold flex items-center">Rating
+      <svg class="w-5 h-5 ml-2 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-5 h-5  flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-5 h-5 flex"alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-5 h-5 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-5 h-5 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      </h3>
+      <p class=" text-sm font-normal text-gray-400">Average Rating 5.0</p>
+      <h3 class="md:text-xl font-bold mt-3.5 h-9 ">Customer Reviews</h3>
+      <div class="bg-white shadow-lg rounded-lg flex items-center mb-2 w-80">   
+      <img class="w-9 h-9 rounded-full ml-3 my-2 mr-2.5" src="dp.jpg" alt="customer profile">
+           
+      <p class="text-sm font-normal text-gray-400 items-center">"The best bed around the block." <br><span class="text-xs ml-2 ">Sonia Gill, Bed Expert</span>
+      <svg class="w-3.5 h-3.5 inline-flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-3.5 h-3.5 inline-flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-3.5 h-3.5 inline-flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-3.5 h-3.5 inline-flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-3.5 h-3.5 inline-flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      </p>
+      
+      </div>
+      </div> 
+      <!-- close button on mobile-->
+          <button 
+            @click = "mobile = null"
+            class="absolute md:static lg:static top-0 rounded-full active-size-button w-16 h-16 flex items-center justify-center text-white text-2xl">X
+            </button>
+      </article>
+    
           </article>
 
-        
           <!-- products table ======================(card 2)-->
           
-        <article class="  mt-8 mr-12 rounded-2xl bg-white shadow-md relative" aria-label="product rustic table">
+        <article class="relative md:static col-span-1 mt-8 mr-12 rounded-2xl bg-white shadow-md lg:relative lg:z-0" aria-label="product rustic table">
                 <div 
                       :class="{ 'card-cover rounded-2xl absolute z-10 w-full h-full flex' : isActive === 'product2'} ">
                   <button  @click="isActive = null"
@@ -112,17 +254,156 @@
                     </svg>
                   </div>
                   <div>
-                    <p @click.prevent="isActive = 'product2' " 
+                    <p @click.prevent="isActive = 'product2' , mobile = 'mobile2' " 
                     class="font-bold mx-1 text-xs whitespace-nowrap">View
                       Details</p>
                   </div>
                 </button>
               </div>
-          </article>
+<!-- SMALL SCREENS description rustic table========================-->
+<article aria-label="rustic table details"
+x-show="mobile === 'mobile2'"
+class="lg:hidden absolute col-span-1 top-52 -inset-x-0 z-20 mt-8 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200">
+<div class=" md:flex md:justify-between ">
+<div class="w-96 mt-16 ml-8 h-60 ">
+
+<!-- primary slider -->
+<div id="primary-slider" class="primary-01 splide ml-8 ">
+<div class="splide__track ">
+  <ul class="splide__list  ">
+
+    <li class="splide__slide w-52 h-52">
+      <img src="rustic-table2.png" alt="product size small">
+    </li>
+
+    <li class="splide__slide w-52 h-52">
+      <img class="" src="rustic-table2.png" alt="product size medium">
+    </li>
+
+    <li class="splide__slide w-52 h-52">
+      <img class="" src="rustic-table2.png" alt="product size large">
+    </li>
+
+  </ul>
+</div>
+</div>
+
+<!-- secondary slider -->
+
+
+<div id="secondary-slider" class="splide secondary-01">  
+   <div class="splide__track ml-12 mr-12 mt-6 "> 
+    <ul class="splide__list ">
     
+      <li class="splide__slide bg-gray-100 rounded-md ">
+        <img class="" src="rustic-table2.png" alt=" product size small">
+      </li>
+
+      <li class="splide__slide bg-gray-100 rounded-md" alt=" product size medium">
+        <img src="rustic-table2.png">
+      </li>
+
+      <li class="splide__slide bg-gray-100 rounded-md" alt="product size large">
+        <img src="rustic-table2.png">
+      </li>
+
+    </ul>
+  </div> 
+  </div>
+</div>
+
+
+<div class="mr-16 mt-16 h-72 ml-12 ">
+  <h3 class="font-bold text-xl text-base leading-7 mt-14">Rustic Table</h3>
+  <div class="flex">
+    <h3 class="text-3xl mt-0.5 leading-10">$450</h3>
+    <button href="#" class="blue-button rounded-2xl w-32 h-8 flex ml-4 mr-4 items-center shadow-md" role="button" aria-label="add to cart">
+      <div class="w-4 h-4 ml-2 my-auto rounded-full  ">
+        <svg class="w-4 h-4 bg-white rounded-full opacity-30" fill="none" stroke="rgba(16, 108, 159, 1)"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+        </svg>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div>
+        <p class="font-bold mx-1 text-sm whitespace-nowrap" >Add to Cart</p>
+      </div>
+  </div>
+  <p class="flex flex-wrap text-sm font-normal text-gray-400 mb-5 leading-5" aria-details="product description">Lorem ipsum dolor sit
+    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.</p>
+
+    <div>
+  
+      <button 
+                class="size-button w-20 sm:w-28 h-6 rounded-2xl bg-gray-300 mr-3.5" role="button"  aria-label="size small"
+                :class="{'active-size-button text-white' : activeVariant === 'variant0'}" >
+        <h5 
+              @click.prevent="activeVariant = 'variant0'"
+              class="text-sm font-normal leading-5 ">SMALL</h5>
+      </button>
+
+      <button 
+            class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5"  role="button" aria-label="size medium"
+            :class="{'active-size-button text-white' : activeVariant === 'variant1'}" >
+        <h5 
+        @click.prevent="activeVariant = 'variant1'"
+        class="text-sm font-normal leading-5">MEDIUM</h5>
+      </button>
+
+
+      <button
+          class="size-button w-20 sm:w-28  h-6 rounded-2xl bg-gray-300 mr-3.5" role="button" aria-label="size large"
+          :class="{'active-size-button text-white' : activeVariant === 'variant2'}" >
+
+        <h5 
+            @click.prevent="activeVariant = 'variant2'"
+            class="text-sm font-normal leading-5">LARGE</h5>
+      </button>
+      </div>
+    </div>
+  </div>
+
+    <!-- CUSTOMER REVIEWS -->
+  <div class=" ml-12  h-60 mt-12">
+    <h3 class="sm:text-xl font-bold flex items-center" >Rating
+      <svg class="w-5 h-5 ml-2 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-5 h-5  flex" alt="star rating"  fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-5 h-5 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-5 h-5 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-5 h-5 flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+    </h3>
+    <p class=" text-sm font-normal text-gray-400">Average Rating 5.0</p>
+    <h3 class="sm:text-xl font-bold mt-3.5 h-9 ">Customer Reviews</h3>
+    <div class="bg-white shadow-lg rounded-lg flex items-center mb-2 w-80">   
+        <img class="w-9 h-9 rounded-full ml-3 my-2 mr-2.5" src="dp.jpg" alt="customer profile">
+             
+      <p class="text-sm font-normal text-gray-400 items-center">"The best bed around the block." <br><span class="text-xs ml-2 ">Sonia Gill, Bed Expert</span>
+      
+        <svg class="w-3.5 h-3.5 inline-flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-3.5 h-3.5 inline-flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-3.5 h-3.5 inline-flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-3.5 h-3.5 inline-flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      <svg class="w-3.5 h-3.5 inline-flex" alt="star rating" fill="orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+      </p>
+    
+    </div>
+  </div> 
+
+  <button 
+  @click = "mobile = null"
+  class="absolute md:static lg:static top-0 rounded-full active-size-button w-16 h-16 flex items-center justify-center text-white text-2xl">X
+  </button>
+</article>
+          </article>
 
           <!-- products  bed (card 3)-->
-           <article class="mt-8 mr-12 rounded-2xl bg-white shadow-md relative" aria-label="product modern bed">
+           <article class=" mt-8 mr-12 rounded-2xl bg-white shadow-md relative" aria-label="product modern bed">
             <div>
               <div 
                   :class="{ 'card-cover rounded-2xl absolute z-10 w-full h-full flex'  : isActive === 'product3'} ">
@@ -158,11 +439,11 @@
 
 <!-- gold chair description -->
 
-          <article  
+      <article  
             id="chair-description"
             x-show="isActive === 'product1' "
-            class="col-span-1  lg:col-span-3   mt-8 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200" aria-label="product modern chair">
-      <div class="md:flex md:flex md:justify-between">    
+            class="hidden md:block lg:col-span-3 mt-8 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200" aria-label="product modern chair">
+      <div class="md:flex md:justify-between">    
 
         <div class="w-96  mt-16 ml-8 h-60  ">
     <!-- primary slider -->
@@ -213,7 +494,7 @@
 
 
 <!-- 2ND COLS of modern chair description -->
-<div class="mr-16 mt-12 h-72 ml-12  ">
+<div class="mr-16 mt-12 h-72 ml-12 ">
   <h3 class="text-md sm:font-bold text-xl text-base leading-7 mt-14">Modern Chair</h3>
   <div class="flex">
     <h3 class="text-3xl mt-0.5 leading-10">$250</h3>
@@ -297,7 +578,8 @@
 </article>
   
          
-        <!-- bed description -->
+   <!-- bed description -->
+
         <article  x-show="isActive === 'product3'"
                   class="col-span-1 lg:col-span-3   mt-8 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200" aria-label="product details modern bed">
       <div class=" md:flex md:justify-between ">
@@ -436,7 +718,7 @@
         <!-- description rustic table========================-->
         <article aria-label="rustic table details"
           x-show="isActive === 'product2' "
-          class="col-span-1 lg:col-span-3  mt-8 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200">
+          class="hidden md:block col-span-1 lg:col-span-3  mt-8 mb-8 rounded-3xl border-2 border-gray-300 bg-gray-200">
           <div class=" md:flex md:justify-between ">
           <div class="w-96 mt-16 ml-8 h-60 ">
 
