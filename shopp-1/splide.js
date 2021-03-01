@@ -5,7 +5,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	var secondarySlider = new Splide( '#secondary-slider', {
 		fixedWidth  : 80,
 		fixedHeight : 80,
-		width       : 290,
+		width       : 220,
 		gap         : 10,
 		cover       : false,
 		isNavigation: true,
