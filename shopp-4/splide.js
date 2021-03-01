@@ -3,8 +3,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
  
 	
 
-// document.querySelectorAll('.secondary').forEach(carousel => new Splide( carousel, {
-	var thumbnailsSplide = new Splide('#splide-thumbnails' , {
+document.querySelectorAll('.secondary').forEach(carousel => new Splide( carousel, {
   fixedWidth  : 100,
 		fixedHeight : 100,
 		width       : 750,
@@ -23,10 +22,9 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			}
 		},
 
-}).mount();
+}).mount());
 
-// document.querySelectorAll('.primary').forEach(carousel => new Splide( carousel, {
-	var primarySplide = new Splide ('#splide-primary', {
+document.querySelectorAll('.primary').forEach(carousel => new Splide( carousel, {
         type       : 'fade',
 		heightRatio: 0.5,
 		pagination : false,
@@ -38,11 +36,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
     
 
 
-});
-
-primarySplide.sync( thumbnailsSplide ).mount();
-
-// .mount());
+}).mount());
 
 
 } );
