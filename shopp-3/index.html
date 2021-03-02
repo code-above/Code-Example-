@@ -30,12 +30,12 @@
         <p class="text-xl font-normal text-center max-w-4xl mx-auto leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 
-    <div class="md:grid grid-cols-4  ">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4  ">
 
 <!-- product 1 -->
         <div 
         
-        class="relative z-10 md:static bg-gray-100 md:px-5 px-12 pt-10 ">
+        class="relative z-10 lg:static bg-gray-100 md:px-5 px-12 pt-10 ">
             <div>
                 <img class="w-full mx-auto " src="image 5.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -52,7 +52,7 @@
 
 <div     x-show="activeMobile === 'mobile0' "
 
-        class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96">
+        class="lg:hidden absolute top-52 inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96">
     
     <div class="justify-between">
         <div class="block">
@@ -126,7 +126,7 @@
 
 <!-- product 2-->
 
-        <div class="relative md:static px-12 pt-10 md:px-5">
+        <div class="relative lg:static px-12 pt-10 md:px-5">
             <div>
                 <img class="w-full " src="image 11.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -143,7 +143,7 @@
 
 <div     x-show="activeMobile === 'mobile1' "
 
-        class=" md:hidden lg:hidden absolute top-52 -inset-x-0 z-20 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96">
+        class="lg:hidden absolute top-52 -inset-x-0 z-20 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96">
     
     <div class="justify-between">
         <div class="block">
@@ -216,7 +216,7 @@
 
 <!-- product 3-->
 
-        <div class="relative md:static bg-gray-100 px-12 pt-10 md:px-5">
+        <div class="relative lg:static bg-gray-100 px-12 pt-10 md:px-5">
             <div>
                 <img class="w-full" src="image 6.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -231,7 +231,7 @@
          <!-- only seen on mobile-->   
             <div    
             x-show="activeMobile === 'mobile2' "
-            class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white z-30 rounded-2xl shadow-2xl overflow-hidden w-96">
+            class="lg:hidden absolute top-52 inset-x-0 mx-12 bg-white z-30 rounded-2xl shadow-2xl overflow-hidden w-96">
         
         <div class="justify-between">
             <div class="block">
@@ -305,7 +305,7 @@
 <!-- product 4-->
 
 
-        <div class="relative md:static px-12 pt-10 md:px-5  md:static">
+        <div class="relative lg:static px-12 pt-10 md:px-5  ">
             <div>
                 <img class="w-full" src="image 4.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -321,7 +321,7 @@
  <!-- only seen on mobile-->   
  <div    
  x-show="activeMobile === 'mobile3' "
- class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 z-40 bg-white rounded-2xl shadow-2xl overflow-hidden w-96">
+ class="lg:hidden absolute top-52 -inset-x-0 mx-12 z-40 bg-white rounded-2xl shadow-2xl overflow-hidden w-96">
 
 <div class="justify-between">
  <div class="block">
@@ -400,8 +400,8 @@
 <!-- only see on medium screens product 1-->
         <div 
         x-show="active === 'product0'"
-        class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-            <div class=" lg:flex justify-between">
+        class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+            <div class=" lg:flex mx-48 ">
                 <div class="flex md:mr-6">
                      <img class="border-2 border-gray-200 md:mr-4" src="image 5.png" alt="product">
                     <div class="">
@@ -467,8 +467,8 @@
     <!-- only see on medium screens product 2-->
         <div 
         x-show="active === 'product1'"
-        class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-            <div class="lg:flex justify-between">
+        class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+            <div class="lg:flex mx-48">
                 <div class="flex md:mr-6 ">
                      <img class="border-2 border-gray-200  md:mr-4" src="image 11.png" alt="product">
                     <div class="">
@@ -534,9 +534,8 @@
 <!-- only see on medium screens product 3-->
 <div 
 x-show="active === 'product2'"
-    @click.away="open = false"
-    class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-    <div class="lg:flex justify-between">
+    class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+    <div class="lg:flex mx-48">
         <div class="flex md:mr-6">
              <img class="border-2 border-gray-200  md:mr-4" src="image 6.png" alt="product">
             <div class="">
@@ -601,8 +600,8 @@ x-show="active === 'product2'"
 <!-- only see on medium screens product 4-->
     <div 
     x-show="active === 'product3'"
-    class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-    <div class="lg:flex justify-between">
+    class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+    <div class="lg:flex mx-48">
         <div class="flex md:mr-6 ">
              <img class="border-2 border-gray-200  md:mr-4" src="image 4.png" alt="product">
             <div class="">
@@ -668,7 +667,7 @@ x-show="active === 'product2'"
 
 <!-- product 5 row 3-->
  
-            <div class="relative md:static bg-white px-12 pt-10 md:px-5 md:py-7 ">
+            <div class="relative lg:static bg-white px-12 pt-10 md:px-5 md:py-7 ">
                 <div>
                     <img class="w-full" src="image 10.png" alt="product">
                     <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -684,7 +683,7 @@ x-show="active === 'product2'"
 
 <div     x-show="activeMobile === 'mobile5' "
 
-        class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-50">
+        class="lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-50">
     
     <div class="justify-between">
         <div class="block">
@@ -757,7 +756,7 @@ x-show="active === 'product2'"
             
         <!-- product 6-->
 
-        <div class="relative md:static bg-gray-100 px-12 pt-10 md:px-5 md:py-7  ">
+        <div class="relative lg:static bg-gray-100 px-12 pt-10 md:px-5 md:py-7  ">
             <div>
                 <img class="w-full" src="image 5.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -773,7 +772,7 @@ x-show="active === 'product2'"
 
 <div     x-show="activeMobile === 'mobile6' "
 
-        class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-50">
+        class="lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-50">
     
     <div class="justify-between">
         <div class="block">
@@ -847,7 +846,7 @@ x-show="active === 'product2'"
 <!-- product 7-->
 
 
-        <div class="relative md:static bg-white px-12 pt-10 md:px-5 md:py-7 ">
+        <div class="relative lg:static bg-white px-12 pt-10 md:px-5 md:py-7 ">
             <div>
                 <img class="w-full" src="image 2.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -863,7 +862,7 @@ x-show="active === 'product2'"
 
 <div     x-show="activeMobile === 'mobile7' "
 
-        class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-10">
+        class="lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-10">
     
     <div class="justify-between">
         <div class="block">
@@ -938,7 +937,7 @@ x-show="active === 'product2'"
         <!-- product-8 -->
 
 
-        <div class="relative md:static bg-gray-100 px-12 pt-10 md:px-5 md:py-7 ">
+        <div class="relative lg:static bg-gray-100 px-12 pt-10 md:px-5 md:py-7 ">
             <div>
                 <img class="w-full" src="image 5.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -954,7 +953,7 @@ x-show="active === 'product2'"
 
 <div     x-show="activeMobile === 'mobile8' "
 
-        class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-20">
+        class="lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-20">
     
     <div class="justify-between">
         <div class="block">
@@ -1030,8 +1029,8 @@ x-show="active === 'product2'"
 <!-- only see on medium screens product 5-->
 <div 
 x-show="active === 'product5'"
-class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-    <div class="lg:flex justify-between">
+class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+    <div class="lg:flex mx-48">
         <div class="flex md:mr-6">
              <img class="border-2 border-gray-200  md:mr-4" src="image 10.png" alt="product">
             <div class="">
@@ -1097,8 +1096,8 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 <!-- only see on medium screens product 6-->
 <div 
 x-show="active === 'product6'"
-class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-    <div class="lg:flex justify-between">
+class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+    <div class="lg:flex mx-48">
         <div class="flex md:mr-6">
              <img class="border-2 border-gray-200  md:mr-4" src="image 5.png" alt="product">
             <div class="">
@@ -1164,8 +1163,8 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 <!-- only see on medium screens product 7-->
 <div 
 x-show="active === 'product7'"
-class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-<div class="lg:flex justify-between">
+class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+<div class="lg:flex mx-48">
 <div class="flex md:mr-6">
      <img class="border-2 border-gray-200  md:mr-4" src="image 2.png" alt="product">
     <div class="">
@@ -1230,8 +1229,8 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 <!-- only see on medium screens product 8-->
 <div 
 x-show="active === 'product8'"
-class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-<div class="lg:flex justify-between">
+class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+<div class="lg:flex mx-48">
 <div class="flex md:mr-6">
      <img class="border-2 border-gray-200  md:mr-4" src="image 5.png" alt="product">
     <div class="">
@@ -1299,7 +1298,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 
         <!-- product 9 row 5-->
 
-        <div class="relative md:static bg-gray-100 px-12 pt-10 md:px-5 md:py-7">
+        <div class="relative lg:static bg-gray-100 px-12 pt-10 md:px-5 md:py-7">
             <div>
                 <img class="w-full" src="image 11.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -1315,7 +1314,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 
 <div     x-show="activeMobile === 'mobile9' "
 
-        class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-30">
+        class="lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-30">
     
     <div class="justify-between">
         <div class="block">
@@ -1389,7 +1388,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 
         <!-- product 10 -->
 
-        <div class="relative md:static bg-white px-12 pt-10 md:px-5 md:py-7">
+        <div class="relative lg:static bg-white px-12 pt-10 md:px-5 md:py-7">
             <div>
                 <img class="w-full" src="image 3.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -1405,7 +1404,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 
 <div     x-show="activeMobile === 'mobile10' "
 
-        class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-40">
+        class="lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-40">
     
     <div class="justify-between">
         <div class="block">
@@ -1478,7 +1477,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 
         <!-- product 11 -->
         
-        <div class="relative md:static bg-gray-100 px-12 pt-10 md:px-5 md:py-7">
+        <div class="relative lg:static bg-gray-100 px-12 pt-10 md:px-5 md:py-7">
             <div>
                 <img class="w-full" src="Rectangle 12.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -1494,7 +1493,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 
 <div     x-show="activeMobile === 'mobile11' "
 
-        class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-50">
+        class="lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-50">
     
     <div class="justify-between">
         <div class="block">
@@ -1568,7 +1567,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 
         <!-- product 12-->
 
-        <div class="relative md:static bg-white px-12 pt-10 md:px-5 md:py-7 ">
+        <div class="relative lg:static bg-white px-12 pt-10 md:px-5 md:py-7 ">
             <div>
                 <img class="w-full" src="image 7.png" alt="product">
                 <h2 class="pt-4 text-lg font-bold">Product Name</h2>
@@ -1584,7 +1583,7 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 
 <div     x-show="activeMobile === 'mobile12' "
 
-        class=" md:hidden lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-60">
+        class="lg:hidden absolute top-52 -inset-x-0 mx-12 bg-white rounded-2xl shadow-2xl overflow-hidden w-96 z-60">
     
     <div class="justify-between">
         <div class="block">
@@ -1661,8 +1660,8 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 <!-- only see on medium screens product 9-->
 <div 
 x-show="active === 'product9'"
-class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-    <div class="lg:flex justify-between">
+class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+    <div class="lg:flex mx-48">
         <div class="flex md:mr-6 ">
              <img class="border-2 border-gray-200  md:mr-4" src="image 11.png" alt="product">
             <div class="">
@@ -1728,8 +1727,8 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 <!-- only see on medium screens product 10-->
 <div 
 x-show="active === 'product10'"
-class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-    <div class="lg:flex justify-between">
+class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+    <div class="lg:flex mx-48">
         <div class="flex md:mr-6">
              <img class="border-2 border-gray-200  md:mr-4" src="image 3.png" alt="product">
             <div class="">
@@ -1795,8 +1794,8 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 <!-- only see on medium screens product 11-->
 <div 
 x-show="active === 'product11'"
-class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-<div class="lg:flex justify-between">
+class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+<div class="lg:flex mx-48">
 <div class="flex md:mr-6 ">
      <img class="border-2 border-gray-200  md:mr-4" src="Rectangle 12.png" alt="product">
     <div class="">
@@ -1861,8 +1860,8 @@ class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-1
 <!-- only see on medium screens product 12-->
 <div 
 x-show="active === 'product12'"
-class="hidden md:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
-<div class="lg:flex justify-between">
+class="hidden lg:block col-span-4 md:bg-gray-100 sm:px-24 md:px-12 md:py-16 px-12 py-10">
+<div class="lg:flex mx-48">
 <div class="flex md:mr-6">
      <img class="border-2 border-gray-200  md:mr-4" src="image 7.png" alt="product">
     <div class="">
