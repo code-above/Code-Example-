@@ -1,0 +1,24 @@
+html {
+font-family: 'Odibee Sans', cursive 'Oswald', sans-serif;
+}
+
+.vertical-text {
+    font-family: 'Oswald';
+    writing-mode: vertical-lr; 
+    -webkit-writing-mode: vertical-lr;
+     -ms-writing-mode: vertical-lr; 
+}
+
+h2  {
+    font-family: "Oswald";
+}
+
+h3 {
+    font-family: 'Odibee Sans'
+}
+
+.cart-button {
+    background: rgba(46, 167, 166, 1);
+    font-family: "Oswald";
+
+}
