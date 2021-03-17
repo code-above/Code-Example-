@@ -6,7 +6,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 document.querySelectorAll('.secondary').forEach(carousel => new Splide( carousel, {
   fixedWidth  : 100,
 		fixedHeight : 100,
-		width       : 750,
+		width       : 500,
 		gap         : 10,
 		cover       : true,
 		isNavigation: true,
@@ -30,10 +30,11 @@ document.querySelectorAll('.primary').forEach(carousel => new Splide( carousel, 
 		pagination : false,
 		cover      : true,
         rewind     : true, 
-        fixedHeight: 600,
-        width:     750,
+        fixedHeight: 500,
+        width:     500,
         arrows:     false,
-    
+		
+
 
 
 }).mount());
