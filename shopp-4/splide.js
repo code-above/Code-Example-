@@ -31,7 +31,7 @@ document.querySelectorAll('.primary').forEach(carousel => new Splide( carousel, 
 		cover      : true,
         rewind     : true, 
         fixedHeight: 500,
-        width:     500,
+        width:     450,
         arrows:     false,
 		
 
