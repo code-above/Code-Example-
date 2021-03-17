@@ -2,7 +2,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	var secondarySlider = new Splide( '#secondary-slider', {
 		fixedWidth  : 100,
 		height      : 100,
-        width       : 460,
+        width       : 450,
 		gap         : 10,
 		cover       : true,
 		isNavigation: true,
@@ -24,8 +24,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		arrows     : false,
 		cover      : true,
         fixedWidth: 500,
-        width      : 460,
-        height     : 400,
+        width      : 430,
+        height     : 370,
 	} ); // do not call mount() here.
 	
 	primarySlider.sync( secondarySlider ).mount();

@@ -20,3 +20,9 @@ html {
      
 
 }
+
+
+.gradient {
+   
+    background: conic-gradient(from .5turn at bottom center, lightblue, white);
+}
