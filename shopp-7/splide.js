@@ -1,8 +1,8 @@
 document.addEventListener( 'DOMContentLoaded', function () {
 	var secondarySlider = new Splide( '#secondary-slider', {
 		fixedWidth  : 100,
-		height      : 350,
-		gap         : 20,
+		height      : 300,
+		gap         : 10,
         direction  : 'ttb',
 	    heightRatio: 0.2,
 	    perPage    : 3,
@@ -13,8 +13,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		focus       : 'center',
 		breakpoints : {
 			'600': {
-				fixedWidth: 66,
-				height    : 40,
+				fixedWidth: 100,
+				height    : 300,
 			}
 		},
 	} ).mount();
