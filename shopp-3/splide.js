@@ -1,5 +1,5 @@
 document.addEventListener( 'DOMContentLoaded', function () {
-    
+ // first slider only (product 1)   
 	var secondarySlider = new Splide( '#secondary-slider', {
 		fixedWidth  : 100,
         width       : 400,
@@ -30,6 +30,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	primarySlider.sync( secondarySlider ).mount();
     } );
 
+//slider for large screens only 
 
 document.addEventListener( 'DOMContentLoaded', function () {
     document.querySelectorAll('.primary-01').forEach(carousel => new Splide( carousel, {
@@ -68,6 +69,8 @@ document.querySelectorAll('.secondary-01').forEach(carousel => new Splide( carou
 
    } );
 
+
+// slider for mobile only 
    document.addEventListener( 'DOMContentLoaded', function () {
     document.querySelectorAll('.primary-mobile').forEach(carousel => new Splide( carousel, {
        type       : 'fade',
