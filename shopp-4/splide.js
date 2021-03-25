@@ -45,29 +45,29 @@ document.querySelectorAll('.primary').forEach(carousel => new Splide( carousel, 
 
 } );
 
-document.addEventListener( 'DOMContentLoaded', function () {
-	var sliderOne = new Splide( '#slider-one', {
-		fixedWidth  : 100,
-		height      : 60,
-		gap         : 10,
-		cover       : true,
-		isNavigation: true,
-		focus       : 'center',
-		breakpoints : {
-			'600': {
-				fixedWidth: 66,
-				height    : 40,
-			}
-		},
-	} ).mount();
+// document.addEventListener( 'DOMContentLoaded', function () {
+// 	var sliderOne = new Splide( '#slider-one', {
+// 		fixedWidth  : 100,
+// 		height      : 60,
+// 		gap         : 10,
+// 		cover       : true,
+// 		isNavigation: true,
+// 		focus       : 'center',
+// 		breakpoints : {
+// 			'600': {
+// 				fixedWidth: 66,
+// 				height    : 40,
+// 			}
+// 		},
+// 	} ).mount();
 	
-	var sliderTwo = new Splide( '#slider-two', {
-		type       : 'fade',
-		heightRatio: 0.5,
-		pagination : false,
-		arrows     : false,
-		cover      : true,
-	} ); // do not call mount() here.
+// 	var sliderTwo = new Splide( '#slider-two', {
+// 		type       : 'fade',
+// 		heightRatio: 0.5,
+// 		pagination : false,
+// 		arrows     : false,
+// 		cover      : true,
+// 	} ); // do not call mount() here.
 	
-	sliderOne.sync( sliderTwo ).mount();
-} );
+// 	sliderOne.sync( sliderTwo ).mount();
+// } );
