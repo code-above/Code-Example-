@@ -10,9 +10,10 @@ document.addEventListener( 'DOMContentLoaded', function () {
         pagination  : false,
         rewind      : true,
 		isNavigation: true,
+		// lazyLoad	: 'nearby',
 		focus       : 'center',
 		breakpoints : {
-			'700': {
+			'800': {
 				fixedWidth: 80,
 				height    : 200,
                 direction  : 'ltr',
