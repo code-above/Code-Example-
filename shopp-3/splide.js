@@ -1,4 +1,5 @@
 document.addEventListener( 'DOMContentLoaded', function () {
+	
  // first slider only (product 1)   
 	var secondarySlider = new Splide( '#secondary-slider', {
 		fixedWidth  : 100,
@@ -48,13 +49,13 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 document.querySelectorAll('.secondary-01').forEach(carousel => new Splide( carousel, {
         fixedWidth  : 100,
-		height      : 300,
-        fixedHeight : 100,
+		height      : 350,
+        fixedHeight : 80,
         type        : 'slide',
 		width       : 100,
         trimSpace   : 'move',
-        heightRatio: 0.5,
-        perPage     : 3,
+        heightRatio: 0.02,
+        perPage     : 4,
 		gap         : 10,
 		cover       : true,
 		isNavigation: true,
