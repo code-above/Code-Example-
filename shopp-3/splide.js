@@ -2,6 +2,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	
  // first slider only (product 1)   
 	var secondarySlider = new Splide( '#secondary-slider', {
+		type		:'loop',
 		fixedWidth  : 100,
         width       : 400,
 		height      : 80,
@@ -48,14 +49,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 
 document.querySelectorAll('.secondary-01').forEach(carousel => new Splide( carousel, {
+		type: 		'loop',
         fixedWidth  : 100,
 		height      : 350,
         fixedHeight : 80,
-        type        : 'slide',
 		width       : 100,
         trimSpace   : 'move',
         heightRatio: 0.02,
-        perPage     : 4,
+        perPage     : 2,
 		gap         : 10,
 		cover       : true,
 		isNavigation: true,
@@ -64,6 +65,7 @@ document.querySelectorAll('.secondary-01').forEach(carousel => new Splide( carou
         rewind      : true,
         pagination  : false,
 		focus       : true,
+		clones 		: 3
 
 	
 }).mount());
@@ -71,9 +73,11 @@ document.querySelectorAll('.secondary-01').forEach(carousel => new Splide( carou
    } );
 
 
-// slider for mobile only 
-   document.addEventListener( 'DOMContentLoaded', function () {
-    document.querySelectorAll('.primary-mobile').forEach(carousel => new Splide( carousel, {
+// slider for mobile only ****************
+document.addEventListener( 'DOMContentLoaded', function () {
+ document.querySelectorAll('.primary-mobile').forEach(carousel => new Splide( carousel, {
+	//  var mobilePrimary = new Splide( '#primary-mobile', {
+	
        type       : 'fade',
 		heightRatio: 0.5,
 		pagination : false,
@@ -84,10 +88,13 @@ document.querySelectorAll('.secondary-01').forEach(carousel => new Splide( carou
         height     : 300,
        
     
-}).mount());
+ } ).mount());
 
 
 document.querySelectorAll('.secondary-mobile').forEach(carousel => new Splide( carousel, {
+	// var mobileSecondary = new Splide( '#secondary-mobile', {
+
+		type		:'loop',
        	fixedWidth  : 100,
         width       : 400,
 		height      : 80,
@@ -102,9 +109,11 @@ document.querySelectorAll('.secondary-mobile').forEach(carousel => new Splide( c
 		focus       : 'center',
 
 	
-}).mount());
+ } ).mount());
+	// mobilePrimary.sync( mobileSecondary ).mount();
 
-   } );
+   });
+
 
 
 

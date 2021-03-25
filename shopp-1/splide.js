@@ -46,7 +46,7 @@ document.querySelectorAll('.primary-01').forEach(carousel => new Splide( carouse
 document.querySelectorAll('.secondary-01').forEach(carousel => new Splide( carousel, {
   fixedWidth  : 80,
 		fixedHeight : 80,
-		width       : 290,
+		width       : 350,
 		gap         : 10,
 		cover       : false,
 		isNavigation: true,

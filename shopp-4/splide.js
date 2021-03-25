@@ -5,7 +5,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
  
 document.querySelectorAll('.secondary').forEach(carousel => new Splide( carousel, {
-  fixedWidth  : 100,
+		type 		:'loop',
+ 	 	fixedWidth  : 100,
 		fixedHeight : 100,
 		width       : 500,
 		gap         : 10,
