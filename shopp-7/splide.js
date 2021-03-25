@@ -1,5 +1,11 @@
 document.addEventListener( 'DOMContentLoaded', function () {
+
+
+
+
+
 	var secondarySlider = new Splide( '#secondary-slider', {
+		type        : 'loop',
 		fixedWidth  : 100,
 		height      : 300,
 		gap         : 10,
@@ -31,4 +37,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	} ); // do not call mount() here.
 	
 	primarySlider.sync( secondarySlider ).mount();
+
+
+
 } );
