@@ -1,5 +1,6 @@
 document.addEventListener( 'DOMContentLoaded', function () {
 	var secondarySlider = new Splide( '#secondary-slider', {
+		type        :'loop',
 		fixedWidth  : 100,
 		height      : 400,
 		gap         : 10,
@@ -17,6 +18,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
 				fixedWidth: 80,
 				height    : 200,
                 direction  : 'ltr',
+				type		:'loop',
+				focus: 'center',
+				isNavigation: true,
+				rewind		: true,
+				clones: 1,
+				perPage : 3
+
+
               
 
 			}
