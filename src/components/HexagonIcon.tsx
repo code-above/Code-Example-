@@ -8,6 +8,8 @@ export default function HexagonIcon() {
         <>
         <Image 
             src={hexagon}
+            height={2000}
+            width={1800}
           
         />
         </>

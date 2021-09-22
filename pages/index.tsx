@@ -3,6 +3,7 @@ import Header from '../src/components/Header'
 import HeroContent from '../src/components/HeroContent'
 import MainSection from '../src/components/MainSection'
 import AboutSection from '../src/components/AboutSection'
+import ContactSection from '../src/components/ContactSection'
 // import Layout from '../src/components/Layout'
 
 
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroSection /> 
       <MainSection />
       <AboutSection />
+      <ContactSection />
    </div>
   )
 }
