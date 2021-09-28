@@ -8,7 +8,7 @@ import icon from '../../src/assets/icon.png'
 export default function InfoBox() {
 
     return (
-        <div className="justify-center rounded-3xl bg-blue-600 block md:flex my-24 mx-12 bg-gradient-to-b from-blue-400 to-blue-600"> 
+        <div className="justify-center rounded-3xl  block md:flex my-24 mx-12 bg-gradient-to-b from-light-blue-gradient to-dark-blue-gradient"> 
             
           <div className="md:grid grid-cols-3 text-white py-10">
             <div className="px-16 md:px-4">

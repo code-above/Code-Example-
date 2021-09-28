@@ -8,8 +8,8 @@ export default function AboutSection() {
     return (
         <section className="ml-12 grid grid-cols-2">
           <div className="grid-cols-1">
-            <h2 className="font-bold text-4xl text-blue-800 pb-2">Lorem Ipsum</h2>
-            <p className="text-gray-400 text-xl mb-12">Lorem ipsum dolor</p>
+            <h2 className="font-bold text-4xl text-blue-button pb-2">Lorem Ipsum</h2>
+            <p className="text-gray-rgba text-xl mb-12">Lorem ipsum dolor</p>
   
 
 
@@ -17,21 +17,21 @@ export default function AboutSection() {
                 <div className="p-4 bg-white rounded-2xl shadow-2xl  w-1/4 h-1/4 md:w-20 md:h-20"> 
                     <IconListItem />
                 </div>
-                    <p className="text-gray-400 flex max-w-xs px-6 items-center " >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p className="text-gray-rgba flex max-w-xs px-6 items-center font-light" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
             <div className="flex pb-9">
                 <div className="p-4 bg-white rounded-2xl shadow-2xl w-1/4 h-1/4 md:w-20 md:h-20"> 
                     <IconListItem />
                 </div>
-                    <p className="text-gray-400 flex max-w-xs px-6 items-center " >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p className="text-gray-rgba flex max-w-xs px-6 items-center font-light" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
             <div className="flex pb-9">
                 <div className="p-4 bg-white rounded-2xl shadow-2xl w-1/4 h-1/4 md:w-20 md:h-20"> 
                     <IconListItem />
                 </div>
-                    <p className="text-gray-400 flex max-w-xs px-6 items-center " >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p className="text-gray-rgba flex max-w-xs px-6 items-center font-light" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
  
