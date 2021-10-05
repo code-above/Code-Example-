@@ -2,7 +2,7 @@ export default function Square() {
 
     return (
         <>
-            <div className="rounded-lg shadow-2xl bg-white w-48 h-48 md:w-96 md:h-96"></div>
+            <div className="rounded-lg shadow-2xl bg-white w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96"></div>
         </>
     )
 }

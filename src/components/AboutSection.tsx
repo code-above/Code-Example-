@@ -6,8 +6,9 @@ import HexagonIcon from '../../src/components/HexagonIcon'
 export default function AboutSection() {
 
     return (
-        <section className="ml-12 grid grid-cols-2">
-          <div className="grid-cols-1">
+        <section className="grid grid-cols-2 container mx-auto ">
+          <div className="ml-12">
+    <div className="">
             <h2 className="font-bold text-4xl text-blue-button pb-2">Lorem Ipsum</h2>
             <p className="text-gray-rgba text-xl mb-12">Lorem ipsum dolor</p>
   
@@ -34,11 +35,12 @@ export default function AboutSection() {
                     <p className="text-gray-rgba flex max-w-xs px-6 items-center font-light" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
- 
-            <div className="grid-flow-col">
+ </div>
+
+            <div className="grid-flow-col min-w-full ">
                 <HexagonIcon />
-   
-    </div>
+            </div>
+
         </section>
     )
 } 

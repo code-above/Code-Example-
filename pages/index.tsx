@@ -6,21 +6,34 @@ import AboutSection from '../src/components/AboutSection'
 import ContactSection from '../src/components/ContactSection'
 import Footer from '../src/components/Footer'
 import SplideCarousel from '../src/components/SplideCarousel'
+import hero from '../src/assets/hero.jpg'
+import Image from 'next/image'
+
 
 
 
 export default function Home() {
 
   return (
-    <>
-      <Header />
+  <div className="relative overflow-x-hidden"> 
+      <div className="absolute opacity-25 transform scale-150 z-0 min-w-full">
+          <Image src={hero}
+          className=""
+            width={1200}
+            height={600}
+            layout="fixed"
+            objectFit="cover"
+          
+            /> 
+      </div>
+      <Header/>
         <HeroSection /> 
         <MainSection />
         <AboutSection />
         <ContactSection />
         <SplideCarousel  />
       <Footer />
-   </>
+   </div>
   )
 }
  

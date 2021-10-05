@@ -6,10 +6,11 @@ export default function HexagonIcon() {
 
     return (
         <>
-        <Image 
+        <Image className="p-0"
             src={hexagon}
-            height={2000}
-            width={1800}
+            layout="fixed"
+            height={700}
+            width={700}
           
         />
         </>
