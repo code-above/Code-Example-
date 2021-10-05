@@ -11,7 +11,7 @@ export default function MainSection() {
                 <h3 className=" leading-snug text-lg md:text-2xl lg:text-3xl font-bold mb-6 ">Lorem Ipsum</h3>
                 <h4 className="pr-8 text-lg md:text-xl font-light leading-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
             </div>
-             <div className="inset-y-2 md:ml-8 lg:mr-6 absolute right-10 lg:right-20 md:-inset-y-40 lg:bottom-5"> 
+             <div className="-inset-y-20 md:ml-8 lg:mr-6 absolute right-5 lg:right-20 md:-inset-y-60 lg:bottom-5"> 
                 <Square />
              </div>
         </section>
