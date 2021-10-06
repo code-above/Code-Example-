@@ -23,7 +23,6 @@ export default function Home() {
             height={600}
             layout="fixed"
             objectFit="cover"
-          
             /> 
       </div>
       <Header/>

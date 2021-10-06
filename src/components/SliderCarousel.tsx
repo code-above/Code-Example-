@@ -17,7 +17,7 @@ export default function SliderCarousel() {
 )
 
 return (
-    <div className="p-6">
+    <div className="p-4 relative -top-20">
       <Carousel
     plugins={[
       'infinite',

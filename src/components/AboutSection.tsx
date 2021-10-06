@@ -6,10 +6,10 @@ import HexagonIcon from '../../src/components/HexagonIcon'
 export default function AboutSection() {
 
     return (
-        <section className="grid grid-cols-2 container mx-auto ">
+        <section className="mb-12 md:mb-0 grid grid-cols-2 container mx-auto">
           <div className="ml-12">
     <div className="">
-            <h2 className="font-bold text-4xl text-blue-button pb-2">Lorem Ipsum</h2>
+            <h2 className="font-bold text-4xl text-blue-button pb-2 whitespace-nowrap">Lorem Ipsum</h2>
             <p className="text-gray-rgba text-xl mb-12">Lorem ipsum dolor</p>
   
 
